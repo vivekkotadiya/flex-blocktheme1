@@ -1,0 +1,173 @@
+.job-cards {
+  padding: 0px 0px 100px;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 60px), 0 100%);
+  margin-bottom: 60px;
+
+  .job-cards {
+
+    @each $color in $theme-color-set {
+      $color-name: nth($color, 1);
+      $color-value: nth($color, 2);
+      
+      &__meta {
+
+        &--color-#{$color-name} {
+
+          span {
+            color: $color-value;
+            border-color: $color-value;
+          }
+        }
+      }
+    }
+
+    &__background {
+      position:absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgb(122, 141, 150) 0%, rgb(186, 43, 43) 100%);
+      background-image: url("../assets/images/smt-background-shape.png"), linear-gradient(135deg, rgb(122, 141, 150) 0%, rgb(186, 43, 43) 100%);
+      background-size: auto;
+      background-repeat: repeat-y;
+      background-position: top;
+      clip-path: polygon(0 0, 100% 60px, 100% 100%, 0 100%);
+      height: 50%;
+    }
+
+    &__meta {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 10px;
+      row-gap: 10px;
+      margin-bottom: 30px;
+
+      &-tag {
+        padding: 10px 16px;
+        font-family: $theme-font-one;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        border: 1px solid $theme-color-eight;
+        color: $theme-color-eight;
+        display: block;
+      }
+    }
+
+    &__item {
+
+      &--image {
+        position: relative;
+        height: 200px;
+
+        picture {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 100%;
+
+          img {
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+          }
+        }
+      }
+
+      &--detail {
+        padding: 20px;
+        border: 4px solid $theme-color-two;
+        background-color: $theme-color-one;
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .job-cards {
+    padding: 0px 0px 120px;
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 80px), 0 100%);
+    margin-bottom: 30px;
+    
+    .job-cards {
+
+      &__background {
+        clip-path: polygon(0 0, 100% 80px, 100% 100%, 0 100%);
+      }
+
+      &__item {
+
+        &--image {
+          height: 240px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .job-cards {
+    padding: 0px 0px 140px;
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 100px), 0 100%);
+
+    .job-cards {
+
+      &__background {
+        clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 100%);
+      }
+
+      &__item {
+
+        &--image {
+          height: 220px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .job-cards {
+    padding: 0 0 180px;
+    margin-bottom: 60px;
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 120px), 0 100%);
+
+    .job-cards {
+
+      &__background {
+        clip-path: polygon(0 0, 100% 120px, 100% 100%, 0 100%);
+        height: 84%;
+      }
+
+      &__item {
+        
+        &--image {
+          height: 300px;
+        }
+
+        &--detail {
+          padding: 30px 40px 70px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .job-cards {
+    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 140px), 0 100%);
+
+    .job-cards {
+
+      &__background {
+        clip-path: polygon(0 0, 100% 140px, 100% 100%, 0 100%);
+        height: 82%;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/reportslides",
+  "version": "0.1.5",
+  "title": "Report Slides",
+  "category": "block-category-listing",
+  "keywords": [
+    "report",
+    "list",
+    "slider"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "degreeTax": {
+      "type": "string",
+      "default": ""
+    },
+    "detailTax": {
+      "type": "string",
+      "default": ""
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": [
+    "smt-theme/reportslider"
+  ],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

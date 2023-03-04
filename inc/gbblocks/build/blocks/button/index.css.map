@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/button/index.css","mappings":";;;AAAA;EACE;AACF,C","sources":["webpack://smt-theme/./src/blocks/button/styles/editor.scss"],"sourcesContent":["wp-block[data-type=\"smt-theme/button\"] {\n  display: flex;\n}\n"],"names":[],"sourceRoot":""}

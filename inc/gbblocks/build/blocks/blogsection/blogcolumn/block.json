@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/blogcolumn",
+  "version": "0.1.5",
+  "title": "Blog Column",
+  "category": "theme",
+  "keywords": [
+    "blog",
+    "column",
+    "section"
+  ],
+  "description": "",
+  "attributes": {},
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "parent": [
+    "smt-theme/blogsection"
+  ],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

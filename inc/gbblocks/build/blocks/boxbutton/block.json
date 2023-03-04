@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/boxbutton",
+  "version": "0.1.0",
+  "title": "Box + Button",
+  "category": "block-category-advanced",
+  "keywords": [
+    "Box",
+    "Button"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "boxColor": {
+      "type": "string",
+      "default": "#39515E"
+    },
+    "colorClass": {
+      "type": "string",
+      "default": "seven"
+    },
+    "level": {
+      "type": "string",
+      "default": "span"
+    },
+    "tag": {
+      "type": "string",
+      "default": "p"
+    },
+    "boxHeadline": {
+      "type": "string",
+      "source": "html",
+      "selector": ".box-button__headline",
+      "default": ""
+    },
+    "boxParagraph": {
+      "type": "string",
+      "source": "html",
+      "selector": ".box-button__text",
+      "default": ""
+    },
+    "button1url": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "href",
+      "selector": ".box-button__one"
+    },
+    "button1linkTarget": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "target",
+      "selector": ".box-button__one"
+    },
+    "button1Text": {
+      "type": "string",
+      "source": "html",
+      "selector": ".box-button__one .button--text",
+      "default": ""
+    },
+    "button2url": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "href",
+      "selector": ".box-button__two"
+    },
+    "button2linkTarget": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "target",
+      "selector": ".box-button__two"
+    },
+    "button2Text": {
+      "type": "string",
+      "source": "html",
+      "selector": ".box-button__two .button--text",
+      "default": ""
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": [
+    "smt-theme/column"
+  ],
+  "editorScript": "file:./index.js"
+}

@@ -1,0 +1,473 @@
+.button--cta {
+  text-decoration: none;
+  font-family: $theme-font-one;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 8px;
+  width: 100%;
+  text-decoration: none;
+  border: 0px;
+  @each $color in $theme-color-set {
+    $color-name: nth($color, 1);
+    $color-value: nth($color, 2);
+    $color-contrast: nth($color, 3);
+    &.button--style- {
+      &one,
+      &two {
+        &.button--color-#{$color-name} {
+          color: $color-contrast;
+          .button--text {
+            background-color: $color-value;
+            color: $color-contrast;
+            &::after,
+            &::before {
+              border-color: $color-value;
+            }
+          }
+        }
+      }
+    }
+  }
+  .button--text {
+    position: relative;
+    display: block;
+  }
+  &.button {
+    &--style- {
+      &one {
+        margin: 10px 0px 20px 0px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        .button--text {
+          padding: 12px 20px;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+          }
+          &::before {
+            border-right-width: 0px;
+            border-bottom-width: 0px;
+            width: 30.22px;
+            height: 28.8px;
+            border-left-width: 4px;
+            border-top-width: 4px;
+            top: -8px;
+            left: -8px;
+          }
+          &::after {
+            border-left-width: 0px;
+            border-top-width: 0px;
+            width: 34.61px;
+            height: 38.04px;
+            border-right-width: 4px;
+            border-bottom-width: 4px;
+            bottom: -8px;
+            right: -8px;
+          }
+        }
+      }
+      &two {
+        margin: 10px 0px 20px 0px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        padding: 8px;
+        .button--text {
+          padding: 12px 20px;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+          }
+          &::before {
+            border-right-width: 0px;
+            border-bottom-width: 0px;
+            width: 30.22px;
+            height: 28.8px;
+            border-left-width: 4px;
+            border-top-width: 4px;
+            top: -8px;
+            left: -8px;
+          }
+          &::after {
+            border-left-width: 0px;
+            border-top-width: 0px;
+            width: 34.61px;
+            height: 27.04px;
+            border-right-width: 4px;
+            border-bottom-width: 4px;
+            bottom: -8px;
+            right: -8px;
+          }
+        }
+      }
+      &three {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        background-color: transparent;
+        .button--text {
+          padding: 12px 40px;
+          border: 1px solid;
+        }
+        @each $color in $theme-color-set {
+          $color-name: nth($color, 1);
+          $color-value: nth($color, 2);
+          $color-contrast: nth($color, 3);
+
+          &.button--color-#{$color-name} {
+            color: $color-value;
+            .button--text {
+              border-color: $color-value;
+            }
+          }
+        }
+      }
+    }
+
+    &--width-xs-{
+      &inline{
+        .button--text{
+          width: -moz-fit-content;
+          width: fit-content;
+        }
+      }
+      &one {
+        .button--text {
+          width: 25%;
+        }
+      }
+      &two {
+        .button--text {
+          width: 50%;
+        }
+      }
+      &three {
+        .button--text {
+          width: 75%;
+        }
+      }
+      &four {
+        .button--text {
+          width: 100%;
+        }
+      }
+    }
+
+    &--align-xs- {
+      &left {
+        .button--text {
+          margin-right: auto;
+        }
+      }
+      &center {
+        .button--text {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      &right {
+        .button--text {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .button--cta {
+    &.button {
+      &--align-sm- {
+        &left {
+          .button--text {
+            margin-right: auto;
+            margin-left: initial;
+          }
+        }
+        &center {
+          .button--text {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        &right {
+          .button--text {
+            margin-left: auto;
+            margin-right: initial;
+          }
+        }
+      }
+      &--width-sm-{
+        &inline{
+          .button--text{
+            width: -moz-fit-content;
+            width: fit-content;
+          }
+        }
+        &one {
+          .button--text {
+            width: 25%;
+          }
+        }
+        &two {
+          .button--text {
+            width: 50%;
+          }
+        }
+        &three {
+          .button--text {
+            width: 75%;
+          }
+        }
+        &four {
+          .button--text {
+            width: 100%;
+          }
+        }
+      }
+      &--style- {
+        &one {
+          margin: 25px 0px;
+          padding: 8px;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        &two {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 20px;
+          .button--text {
+            padding: 10px 25px;
+            &::before {
+              width: 25.62px;
+              height: 23.74px;
+              border-left-width: 3px;
+              border-top-width: 3px;
+            }
+            &::after {
+              width: 27.37px;
+              height: 23.64px;
+              border-right-width: 3px;
+              border-bottom-width: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .button--cta {
+    &.button {
+      &--align-md- {
+        &left {
+          .button--text {
+            margin-right: auto;
+            margin-left: initial;
+          }
+        }
+        &center {
+          .button--text {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        &right {
+          .button--text {
+            margin-left: auto;
+            margin-right: initial;
+          }
+        }
+      }
+      &--width-md-{
+        &inline{
+          .button--text{
+            width: -moz-fit-content;
+            width: fit-content;
+          }
+        }
+        &one {
+          .button--text {
+            width: 25%;
+          }
+        }
+        &two {
+          .button--text {
+            width: 50%;
+          }
+        }
+        &three {
+          .button--text {
+            width: 75%;
+          }
+        }
+        &four {
+          .button--text {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .button--cta {
+    &.button {
+      &--align-lg- {
+        &left {
+          .button--text {
+            margin-right: auto;
+            margin-left: initial;
+          }
+        }
+        &center {
+          .button--text {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        &right {
+          .button--text {
+            margin-left: auto;
+            margin-right: initial;
+          }
+        }
+      }
+      &--width-lg-{
+        &inline{
+          .button--text{
+            width: -moz-fit-content;
+            width: fit-content;
+          }
+        }
+        &one {
+          .button--text {
+            width: 25%;
+          }
+        }
+        &two {
+          .button--text {
+            width: 50%;
+          }
+        }
+        &three {
+          .button--text {
+            width: 75%;
+          }
+        }
+        &four {
+          .button--text {
+            width: 100%;
+          }
+        }
+      }
+      &--style- {
+        &one {
+          padding: 10px;
+          margin: 30px 0px;
+          font-size: 18px;
+          line-height: 24px;
+          .button--text {
+            padding: 18px 36px;
+            &::before {
+              width: 39.22px;
+              height: 37.8px;
+              border-left-width: 5px;
+              border-top-width: 5px;
+              top: -10px;
+              left: -10px;
+            }
+            &::after {
+              width: 43.61px;
+              height: 36.04px;
+              border-right-width: 5px;
+              border-bottom-width: 5px;
+              bottom: -10px;
+              right: -10px;
+            }
+          }
+        }
+        &two {
+          margin: 20px 0px;
+          padding: 6px;
+          font-size: 16px;
+          line-height: 22px;
+          .button--text {
+            padding: 10px 30px;
+            &::before {
+              top: -6px;
+              left: -6px;
+            }
+            &::after {
+              bottom: -6px;
+              right: -6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .button--cta {
+    &.button {
+      &--align-xl- {
+        &left {
+          .button--text {
+            margin-right: auto;
+            margin-left: initial;
+          }
+        }
+        &center {
+          .button--text {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        &right {
+          .button--text {
+            margin-left: auto;
+            margin-right: initial;
+          }
+        }
+      }
+      &--width-xl-{
+        &inline{
+          .button--text{
+            width: -moz-fit-content;
+            width: fit-content;
+          }
+        }
+        &one {
+          .button--text {
+            width: 25%;
+          }
+        }
+        &two {
+          .button--text {
+            width: 50%;
+          }
+        }
+        &three {
+          .button--text {
+            width: 75%;
+          }
+        }
+        &four {
+          .button--text {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/image",
+  "version": "0.1.5",
+  "title": "Image",
+  "category": "block-category-basic",
+  "keywords": ["image", "picture"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "webpImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "xsimageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "webpxsImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "mdimageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "webpmdImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "imageDefaultAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    },
+    "caption": {
+      "type": "boolean",
+      "default": false
+    },
+    "captionText": {
+      "type": "string",
+      "source": "html",
+      "selector": "figcaption",
+      "default": ""
+    },
+    "isImage": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": ["smt-theme/column"],
+  "editorScript": "file:./index.js"
+}

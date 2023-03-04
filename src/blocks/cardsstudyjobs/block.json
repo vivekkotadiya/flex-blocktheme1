@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/cardsstudyjobs",
+  "version": "0.1.5",
+  "title": "Study Jobs Listing",
+  "category": "block-category-listing",
+  "keywords": ["listing", "study", "jobs"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "url": {
+      "type": "string",
+      "source": "attribute",
+      "selector": ".job-cards__button",
+      "attribute": "href"
+    },
+    "studyJobTarget": {
+      "type": "string",
+      "source": "attribute",
+      "selector": ".job-cards__button",
+      "attribute": "target"
+    },
+    "studyJobBtnColor": {
+      "type": "string",
+      "default": "#BC1717"
+    },
+    "studyJobBtnColorClass": {
+      "type": "string",
+      "default": "three"
+    },
+    "studyjobcontent": {
+      "type": "string",
+      "source": "html",
+      "selector": ".button--text"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": ["smt-theme/section", "smt-theme/sectionpattern", "smt-theme/tabcontent"],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

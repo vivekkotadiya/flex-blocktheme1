@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/accordion",
+  "version": "0.1.5",
+  "title": "Accordion",
+  "category": "block-category-structure",
+  "keywords": [
+    "accordion"
+  ],
+  "description": "",
+  "attributes": {
+    "ItemArrays": {
+      "type": "string",
+      "default": [
+        "Accordion 1"
+      ]
+    },
+    "itemCount": {
+      "type": "number",
+      "default": 1
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    },
+    "accordionStyle": {
+      "type": "string",
+      "default": "one"
+    },
+    "accordionColor": {
+      "type": "string",
+      "default": "#000"
+    },
+    "accordionColorClass": {
+      "type": "string",
+      "default": "eight"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "textdomain": "smt-theme",
+  "parent": [
+    "smt-theme/column"
+  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

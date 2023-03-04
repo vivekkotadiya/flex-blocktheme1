@@ -1,0 +1,63 @@
+@import "../../../styles/_variable.scss";
+
+.wp-block[data-type="smt-theme/tabcontent"].is-selected > .tabs-content__item {
+  > .block-editor-inner-blocks
+    > .block-editor-block-list__layout
+    > .block-list-appender
+    button {
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 12px !important;
+    box-shadow: inset 0 0 0 1px #007cba;
+    color: #007cba;
+    margin-bottom: 20px;
+  }
+}
+
+[data-type="smt-theme/tabs"] {
+  .tabs {
+    .tabs-content {
+      position: relative;
+
+      &__item {
+        display: block;
+        opacity: 1;
+        position: relative;
+        transform-origin: left top;
+        transform: unset;
+        max-height: initial;
+        overflow: hidden;
+      }
+    }
+
+    [data-type="smt-theme/tabcontent"] {
+      display: block;
+
+      &[data-hidden] {
+        display: none;
+      }
+    }
+  }
+}
+
+@each $color in $theme-color-set {
+  $color-number: nth($color, 1);
+  $color-three: nth($color, 4);
+
+  .section--bg-#{$color-number} {
+    [data-type="smt-theme/tabs"] {
+      .tabs {
+        .tabs-nav {
+          &__item.active {
+            background-color: transparent;
+            color: #{$color-three};
+            border: 1px solid #{$color-three};
+          }
+        }
+      }
+    }
+  }
+}

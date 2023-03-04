@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/blogsection",
+  "version": "0.1.5",
+  "title": "Blog Section",
+  "category": "block-category-sections",
+  "keywords": ["news", "section"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": ["smt-theme/section", "smt-theme/sectionpattern", "smt-theme/tabcontent"],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

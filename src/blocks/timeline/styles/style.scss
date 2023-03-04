@@ -1,0 +1,268 @@
+.timeline {
+  margin: 0px auto 70px;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  .timeline {
+    &__content {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+      height: inherit;
+    }
+    &__connector {
+      border-left: 3px solid $theme-color-six;
+      height: calc(100% - 15px);
+      left: 15px;
+      position: absolute;
+      top: 15px;
+      width: 1px;
+      &--arrow{
+        bottom: -28.7px;
+        top: unset;
+        left: -18px;
+        &::before{
+          border-top: 3px solid $theme-color-three;
+          border-left: 3px solid $theme-color-three;
+        }
+        &::after{
+          border-bottom: 3px solid $theme-color-three;
+          border-right: 3px solid $theme-color-three;
+        }
+        &-view{
+          background-color: $theme-color-three;
+        }
+      }
+    }
+    &-item {
+      @each $color in $theme-color-set {
+        $color-name: nth($color, 1);
+        $color-value: nth($color, 2);
+
+        &--color-#{$color-name} {
+          .timeline-item {
+            &__tag {
+              border-color: $color-value;
+              color: $color-value;
+            }
+            &__arrow {
+              &-view {
+                background-color: $color-value;
+              }
+              &::before {
+                border-top-color: $color-value;
+                border-left-color: $color-value;
+              }
+              &::after {
+                border-bottom-color: $color-value;
+                border-right-color: $color-value;
+              }
+            }
+          }
+        }
+      }
+      margin-bottom: 40px;
+      flex-direction: column;
+      position: relative;
+      width: calc(100% - 40px);
+      margin-left: auto;      
+      &__info {
+        position: relative;
+      }
+      &__content {
+        background-color: $theme-color-two;
+        padding: 15px;
+        border: 5px solid $theme-color-two;
+      }
+      &__tag {
+        font-family: $theme-font-one;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 10px;
+        border: 1px solid $theme-color-eight;
+        color: $theme-color-eight;
+        margin: 0px 0px 10.5px;
+        display: block;
+        width: fit-content;
+      }
+      &__arrow {
+        left: -40px;
+        top: 0px;
+        &::before{
+          border-top: 3px solid $theme-color-eight;
+          border-left: 3px solid $theme-color-eight;
+        }
+        &::after {
+          border-bottom: 3px solid $theme-color-eight;
+          border-right: 3px solid $theme-color-eight;
+        }
+      }
+    }
+    &__connector--arrow, &-item__arrow {
+      width: 30px;
+      height: 30px;
+      background-color: $theme-color-one;
+      position: absolute;
+      z-index: 1;      
+      &-view {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+        width: 14px;
+        height: 14px;
+      }
+      &::before,
+      &::after {
+        content: "";
+        width: 17.76px;
+        height: 17.76px;
+        position: absolute;
+      }
+      &::before {
+        left: 0px;
+        top: 0px;
+      }
+      &::after {
+        right: 0px;
+        bottom: 0px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 481px) {
+  .timeline {
+    margin: 0px auto 87.7px;
+    max-width: 370px;
+    .timeline{
+      &__connector{
+        height: 100%;
+        &--arrow{
+          bottom: -15px;
+        }
+      }
+      &-item{
+        &__content{
+          padding: 25px 20px 20px;
+        }
+        &__arrow{
+          top: 6.8px;
+        }
+      }
+      &__tag{
+        margin-bottom: 15px;
+      }
+      &__connector--arrow, &-item__arrow{
+        width: 27.71px;
+        height: 27.71px;
+        &::before{
+          top: -1.5px;
+          left: -1.5px;
+        }
+        &::after{
+          bottom: -1.5px;
+          right: -1.5px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 769px) {
+  .timeline {
+    max-width: 670px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .timeline {
+    margin: 0px auto;
+    max-width: 860px;
+    .timeline {
+      &__content {
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+      }
+      &__connector {
+        left: 50%;
+        top: 40px;
+        height: calc(100% - 40px);
+        &--arrow{
+          bottom: 0px;
+        }
+      }
+      &-item {
+        &--align {
+          &-left {
+            margin-right: auto;
+            margin-left: 0px;
+            .timeline-item {
+              &__arrow {
+                right: -51px;
+                top: 40px;
+                left: unset;
+              }
+            }
+          }
+          &-right {
+            margin-left: auto;
+            .timeline-item {
+              &__content {
+                margin-left: auto;
+              }
+              &__arrow {
+                left: -51px;
+                top: 40px;
+              }
+            }
+          }
+        }
+        margin-bottom: 160px;
+        width: calc(50% - 31px);
+        &:nth-child(2){
+          margin-top: 293px;
+        }
+        &__content {
+          padding: 40px 40px 40px 34px;
+        }
+        &__tag {
+          font-size: 14px;
+          padding: 10px 16px;
+          margin: 0px 0px 14px;
+        }
+        &__arrow{
+          right: -53px;
+          top: 40px;
+        }
+      }
+      &__connector--arrow, &-item__arrow {
+        width: 40px;
+        height: 50px;
+        &-view {
+          width: 14px;
+          height: 14px;
+        }
+        &::before,
+        &::after {
+          width: 17.76px;
+          height: 17.76px;
+        }
+        &::before {
+          left: 3.9px;
+          top: 8.9px;
+        }
+        &::after {
+          right: 3.9px;
+          bottom: 8.9px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1301px) {
+  .timeline {
+    max-width: 1240px;
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/headline",
+  "version": "0.1.5",
+  "title": "Headline",
+  "category": "block-category-basic",
+  "keywords": [
+    "headline",
+    "subheadline"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "h1,h2,h3,h4,h5,h6,span",
+      "default": ""
+    },
+    "level": {
+      "type": "string",
+      "default": "1"
+    },
+    "placeholder": {
+      "type": "string",
+      "default": "Heading"
+    },
+    "headStyle": {
+      "type": "string",
+      "default": "three"
+    },
+    "headColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "headColorClass": {
+      "type": "string",
+      "default": "eight"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    },
+    "extraClass": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignXs": {
+      "type": "string",
+      "default": "left"
+    },
+    "AlignSm": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignMd": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignLg": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignXl": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": [
+    "smt-theme/column",
+    "smt-theme/blogcolumn"
+  ],
+  "editorScript": "file:./index.js"
+}

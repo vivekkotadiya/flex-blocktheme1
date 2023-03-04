@@ -1,0 +1,203 @@
+.listing-report {
+  margin-bottom: 20px;
+
+  .listing-report {
+
+    &__item {
+      border: 1px dashed $theme-color-seven;
+      padding: 20px;
+
+      .listing-report {
+
+        &__image {
+          width: 100%;
+          height: 300px;
+          margin: 0px 0px 20px;
+
+          picture {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        &__detail {
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 auto;
+        }
+
+        &__meta-tax {
+          font-family: $theme-font-one;
+          font-size: 16px;
+          line-height: 26px;
+          font-weight: 400;
+          color: $theme-color-three;
+          margin: 0px 0px 25px;
+          display: block;
+          text-transform: uppercase;
+        }
+
+        &__more {
+          font-family: $theme-font-one;
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 400;
+          color: $theme-color-seven;
+          border: 1px solid $theme-color-seven;
+          padding: 6px 10px 7px;
+          display: inline-block;
+          text-decoration: none;
+          position: relative;
+          margin-right: 45px;
+          margin-top: auto;
+          text-align: center;
+          max-width: 250px;
+
+          &-icon {
+            position: absolute;
+            border: 1px solid $theme-color-seven;
+            width: 35px;
+            height: 35px;
+            margin-left: 10px;
+            right: -45px;
+            top: -1px;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              position: absolute;
+              background: transparent;
+              text-indent: -9999px;
+              border-top: 2px solid $theme-color-seven;
+              border-left: 2px solid $theme-color-seven;
+              text-decoration: none;
+              color: transparent;
+              transform: rotate(135deg);
+              width: 5.57px;
+              height: 5.57px;
+              left: -3px;
+              right: 0px;
+              top: 0px;
+              bottom: 0px;
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .listing-report {
+    margin-bottom: 40px;
+    
+    .listing-report {
+
+      &__item {
+    
+        .listing-report {
+
+          &__image {
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .listing-report {
+    
+    .listing-report {
+
+      &__item {
+    
+        .listing-report {
+
+          &__image {
+            height: 320px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .listing-report {
+    margin-bottom: 60px;
+
+    .listing-report {
+
+      &__item {
+        padding: 24px;
+
+        .col__content {
+          flex-direction: row;
+        }
+
+        .listing-report {
+
+          &__image {
+            width: 280px;
+            margin: 0px;
+          }
+
+          &__detail {
+            width: calc(100% - 280px);
+            padding: 20px 0 0 20px;
+
+            .headline {
+              margin: 0px 0px 5px;
+            }
+          }
+
+          &__meta-tax {
+            margin: 0px 0px 30px;
+          }
+
+          &__more {
+            padding: 6px 20px 7px;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .listing-report {
+
+    .listing-report {
+
+      &__item {
+
+        .listing-report {
+
+          &__image {
+            width: 260px;
+            height: 300px;
+          }
+
+          &__detail {
+            width: calc(100% - 260px);
+          }
+
+          &__more {
+            margin-top: auto;
+          }
+        }
+      }
+    }
+  }
+}

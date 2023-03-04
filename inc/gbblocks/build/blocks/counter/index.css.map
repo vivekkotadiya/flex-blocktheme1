@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/counter/index.css","mappings":";;;AAAA;EACE;EACA;AACF,C","sources":["webpack://smt-theme/./src/blocks/counter/styles/editor.scss"],"sourcesContent":[".wp-block-smt-theme-counter {\n  width: auto;\n  margin: 0px auto;\n}\n"],"names":[],"sourceRoot":""}

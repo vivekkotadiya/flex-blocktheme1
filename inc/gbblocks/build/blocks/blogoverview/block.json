@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/blogoverview",
+  "version": "0.1.5",
+  "title": "Blog Overview",
+  "category": "block-category-listing",
+  "keywords": [
+    "blog",
+    "list",
+    "taxonomy"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "listTaxonomy": {
+      "type": "array"
+    },
+    "blogsListing": {
+      "type": "boolean",
+      "default": false
+    },
+    "featuredId": {
+      "type": "number"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

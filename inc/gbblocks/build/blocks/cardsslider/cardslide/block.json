@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/cardslide",
+  "version": "0.1.5",
+  "title": "Card Slide",
+  "category": "theme",
+  "description": "A gutenberg block for Card Slide.",
+  "supports": {
+    "multiple": true,
+    "reusable": false,
+    "html": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "xsimageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "xswebpImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number",
+      "default": ""
+    },
+    "altText": {
+      "type": "string",
+      "default": ""
+    },
+    "headlinetext": {
+      "type": "string",
+      "source": "html",
+      "selector": ".card--name"
+    },
+    "headlinelevel": {
+      "type": "string",
+      "default": "4"
+    },
+    "description": {
+      "type": "string",
+      "source": "html",
+      "selector": ".card--text"
+    },
+    "texttag": {
+      "type": "string",
+      "default": "p"
+    },
+    "headColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "headColorClass": {
+      "type": "string",
+      "default": "eight"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "textColorClass": {
+      "type": "string",
+      "default": "eight"
+    },
+    "buttonColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "buttonColorClass": {
+      "type": "string",
+      "default": "eight"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "source": "attribute",
+      "selector": ".button--cta",
+      "attribute": "href"
+    },
+    "buttonlinkTarget": {
+      "type": "string",
+      "source": "attribute",
+      "selector": ".button--cta",
+      "attribute": "target"
+    },
+    "buttonText": {
+      "type": "string",
+      "source": "html",
+      "selector": ".button--text"
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": [
+    "smt-theme/cardsslider"
+  ],
+  "editorScript": "file:./index.js"
+}

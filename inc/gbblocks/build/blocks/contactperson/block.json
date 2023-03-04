@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/contactperson",
+  "version": "0.1.5",
+  "title": "Contact Person Preview",
+  "category": "block-category-preview",
+  "keywords": [
+    "team",
+    "person",
+    "contact"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "style": {
+      "type": "string",
+      "default": "one"
+    },
+    "personId": {
+      "type": "string",
+      "default": 0
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": [
+    "smt-theme/column"
+  ],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

@@ -1,0 +1,58 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/timeline/styles/editor.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+.section .wp-block[data-type="smt-theme/timeline"] > .timeline__content > .block-list-appender {
+  position: relative;
+  display: none;
+  width: 100%;
+  bottom: -120px;
+}
+.section .wp-block[data-type="smt-theme/timeline"] > .timeline__content > .block-list-appender > button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  box-shadow: inset 0 0 0 1px #007cba;
+  color: #007cba;
+  margin-bottom: 20px;
+}
+
+.wp-block[data-type="smt-theme/timeline"].is-selected > .timeline__content > .block-list-appender,
+.wp-block[data-type="smt-theme/timeline"].has-child-selected > .timeline__content > .block-list-appender {
+  display: block;
+}
+.wp-block[data-type="smt-theme/timeline"].is-selected > .timeline__content > .timeline-item.is-selected > .timeline-item__header svg,
+.wp-block[data-type="smt-theme/timeline"].has-child-selected > .timeline__content > .timeline-item.is-selected > .timeline-item__header svg {
+  transform: rotate(0deg);
+}
+
+.wp-block[data-type="smt-theme/timelineitem"] > .timeline-item__content > .timeline-item__content-helper > .block-list-appender button {
+  box-shadow: inset 0 0 0 1px #007cba;
+  color: #007cba;
+}
+.wp-block[data-type="smt-theme/timelineitem"] > .timeline-item__content > .timeline-item__content-helper > .block-list-appender button.block-list-appender__toggle {
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.wp-block[data-type="smt-theme/timelineitem"].is-selected > .timeline-item__content,
+.wp-block[data-type="smt-theme/timelineitem"].has-child-selected > .timeline-item__content {
+  max-height: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .section .wp-block[data-type="smt-theme/timeline"] > .timeline__content > .block-list-appender {
+    bottom: -60px;
+  }
+  .timeline .timeline__connector {
+    height: calc(100% - 50px);
+  }
+  .timeline .timeline__connector--arrow {
+    bottom: 0px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map*/

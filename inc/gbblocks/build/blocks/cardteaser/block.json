@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/cardteaser",
+  "version": "0.1.5",
+  "title": "Card Teaser",
+  "category": "block-category-advanced",
+  "keywords": [
+    "card",
+    "teaser"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "xsimageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "webpxsImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "mdimageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "webpmdImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "imageDefaultAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "cardHeadColor": {
+      "type": "string",
+      "default": "#39515E"
+    },
+    "cardHeadColorClass": {
+      "type": "string",
+      "default": "seven"
+    },
+    "cardHead": {
+      "type": "string",
+      "source": "html",
+      "selector": ".card-teaser__headline",
+      "default": ""
+    },
+    "cardHeadLevel": {
+      "type": "string",
+      "default": "3"
+    },
+    "cardTextColor": {
+      "type": "string",
+      "default": "#39515e"
+    },
+    "cardTextColorClass": {
+      "type": "string",
+      "default": "seven"
+    },
+    "cardText": {
+      "type": "string",
+      "source": "html",
+      "selector": ".card-teaser__text",
+      "default": ""
+    },
+    "cardTextTag": {
+      "type": "string",
+      "default": "p"
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": ""
+    },
+    "cardTBtnColor": {
+      "type": "string",
+      "default": "#BC1717"
+    },
+    "cardTBtnColorClass": {
+      "type": "string",
+      "default": "three"
+    },
+    "cardTBtncontent": {
+      "type": "string",
+      "source": "html",
+      "selector": ".card-teaser__button--text"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": [
+    "smt-theme/section",
+    "smt-theme/sectionpattern",
+    "smt-theme/tabcontent"
+  ],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

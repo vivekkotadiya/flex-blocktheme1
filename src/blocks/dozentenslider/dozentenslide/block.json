@@ -1,0 +1,54 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "smt-theme/dozentenslide",
+	"version": "0.1.5",
+	"title": "Dozenten Slide",
+	"category": "theme",
+	"description": "A gutenberg block for Dozenten Slide.",
+	"supports": {
+		"multiple": true,
+		"reusable": false,
+		"html": false,
+		"customClassName": false
+	},
+	"attributes": {
+		"xsimageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"xswebpImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"imageId": {
+			"type": "number",
+			"default": ""
+		},
+		"altText": {
+			"type": "string",
+			"default": ""
+		},
+		"headlinetext": {
+			"type": "string",
+			"source": "html",
+			"selector": ".dozent--name"
+		},
+		"headlinelevel": {
+			"type": "string",
+			"default": "4"
+		},
+		"description": {
+			"type": "string",
+			"source": "html",
+			"selector": ".dozent--tags"
+		},
+		"tags": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "smt-theme",
+	"parent": ["smt-theme/dozentenslider"],
+	"editorScript": "file:./index.js"
+}

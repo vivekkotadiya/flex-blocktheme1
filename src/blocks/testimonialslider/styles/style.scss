@@ -1,0 +1,144 @@
+.testimonial_slider{
+	margin-bottom: 20px;
+	.testimonial{
+		.image{
+			max-width: 246px;
+			object-fit: cover;
+			object-position: center;
+			z-index: 1;
+		}
+		&__inner{
+			background-color: #f4f4f4;
+			margin-top: -60px;
+			margin-bottom: 20px;
+			padding:60px 20px 20px 20px;
+		}
+		.col__content{
+			position: relative;
+		}
+	}
+	.splide__arrows{
+		justify-content: center;
+		display: flex !important;
+	}
+}
+
+.splide{
+	&__arrows {
+	  display: flex;
+	  z-index: 10;
+	  align-items: center;
+	  button {
+		width: 55px;
+		height: 55px;
+		border: 1px solid $theme-color-seven;
+		position: relative;
+		background: $theme-color-one;
+		cursor: pointer;
+		display: block;
+		transition: all 0.5s;
+		&.splide__arrow--prev {
+		  margin-right: 5px;
+  
+		  &::after {
+			transform: rotate(313deg);
+			left: 6px;
+		  }
+		}
+  
+		&.splide__arrow--next {
+		  margin-left: 5px;
+		}
+  
+		&::after {
+		  content: "";
+		  display: block;
+		  position: absolute;
+		  background: transparent;
+		  text-indent: -9999px;
+		  border-top: 2px solid $theme-color-seven;
+		  border-left: 2px solid $theme-color-seven;
+		  text-decoration: none;
+		  color: transparent;
+		  transform: rotate(135deg);
+		  width: 8px;
+		  height: 8px;
+		  left: -4px;
+		  right: 0px;
+		  top: 0px;
+		  bottom: 0px;
+		  margin: auto;
+		}
+		&:hover{
+			background: $theme-color-seven;
+			&::after {
+				border-color: $theme-color-one;
+			}
+		}
+	  }
+	}
+}
+
+@media screen and (min-width: 481px) {
+	.testimonial_slider{
+		.testimonial{
+			.image{
+				max-width: 300px;
+				margin-left: 20px;
+				
+			}
+			&__inner{
+				margin-top: -80px;
+				margin-bottom: 40px;
+				padding-top:80px;
+			}
+		}
+		.splide__arrows{
+			justify-content: left;
+			//margin-left: 20px;
+		}
+	}	
+}
+
+@media screen and (min-width: 1025px) {
+	.testimonial_slider{
+		margin-bottom: 60px;
+		.testimonial{
+			.image{
+				max-width: 470px;
+				margin-left: 0px;
+				
+			}
+			&__inner{
+				margin-top: 70px;
+				margin-bottom: 25px;
+				padding:40px;
+			}
+		}
+		.splide__arrows{
+			justify-content: left;
+			margin-left: 40px;
+		}
+	}	
+}
+
+@media screen and (min-width: 1401px) {
+	.testimonial_slider{
+		margin-top: 40px;
+		margin-bottom: 75px;
+		// .splide__arrows{
+		// 	margin-top: -9%;
+		// 	left: 41%;
+		// }
+	}	
+}
+
+@media screen and (min-width: 1601px) {
+	.testimonial_slider{
+		// .splide__arrows{
+		// 	margin-top: -12%;
+			
+		// }
+	}	
+}
+

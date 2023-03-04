@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/youtubesmall/index.css","mappings":";;;AAEI;EACE;AADN,C","sources":["webpack://smt-theme/./src/blocks/youtubesmall/styles/editor.scss"],"sourcesContent":[".youtube.youtube--small {\n  .youtube {\n    &__overlay {\n      top: 24px;\n    }\n  }\n}\n"],"names":[],"sourceRoot":""}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/tabs",
+  "version": "0.1.5",
+  "title": "Tabs",
+  "category": "block-category-structure",
+  "description": "",
+  "supports": {
+    "multiple": true,
+    "reusable": false,
+    "html": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "innerItem": {
+      "type": "array",
+      "default": []
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": ["smt-theme/section", "smt-theme/sectionpattern"],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

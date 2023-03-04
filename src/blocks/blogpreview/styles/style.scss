@@ -1,0 +1,138 @@
+.preview-blog {
+  margin: 0px 0px 40px;
+
+  .preview-blog {
+
+    &__image {
+      width: 100%;
+      height: 190px;
+
+      picture {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &__detail {
+      border: 4px solid $theme-color-two;
+      border-top: none;
+      position: relative;
+      padding: 20px 20px 119px;
+      background-color: $theme-color-one;
+      position: relative;
+      flex: 1 1 auto;
+
+      .preview-blog {
+
+        &__meta {
+
+          &-date {
+            font-size: 14px;
+            line-height: 18px;
+            font-family: $theme-font-one;
+            font-weight: 400;
+            color: $theme-color-three;
+            margin: 0px 0px 20px;
+            display: block;
+            text-transform: uppercase;
+          }
+
+          &-tax {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 10px;
+            row-gap: 5px;
+            margin: 0px 0px 30px;
+
+            &-name {
+              padding: 10px 16px;
+              border: 1px solid $theme-color-seven;
+              color: $theme-color-seven;
+              font-size: 12px;
+              line-height: 18px;
+              font-family: $theme-font-one;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+
+      .button--cta {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .preview-blog {
+    margin: 0px 0px 60px;
+
+    .preview-blog {
+
+      &__image {
+        height: 240px;
+      }
+
+      &__detail {
+        padding: 20px 20px 116px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .preview-blog {
+
+    .preview-blog {
+      
+      &__image {
+        height: 210px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .preview-blog {
+    margin: 0px 0px 80px;
+
+    .preview-blog {
+
+      &__image {
+        height: 270px;
+      }
+
+      &__detail {
+        padding: 32px 40px 114px;
+
+        .button--cta {
+          left: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .preview-blog {
+
+    .preview-blog {
+      
+      &__image {
+        height: 260px;
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.text {
+  font-family: $theme-font-one;
+  font-weight: 400;
+  display: block;
+  &.text {
+    @each $color in $theme-color-set {
+      $color-name: nth($color, 1);
+      $color-value: nth($color, 2);
+
+      &--color-#{$color-name} {
+        color: $color-value;
+      }
+    }
+
+    &--align-xs {
+      &-left {
+        text-align: left;
+      }
+      &-center {
+        text-align: center;
+      }
+      &-right {
+        text-align: right;
+      }
+    }
+
+    &--style- {
+      &one,
+      &two {
+        font-size: 15px;
+        line-height: 24px;
+        margin: 0px 0px 25px;
+      }
+    }
+  }
+}
+
+@each $color in $theme-color-set {
+  $color-name: nth($color, 1);
+  $color-link: nth($color, 4);
+
+  .section--bg-#{$color-name} {
+    .text {
+      a {
+        color: $color-link;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .text {
+    &.text {
+      &--align-sm {
+        &-left {
+          text-align: left;
+        }
+        &-center {
+          text-align: center;
+        }
+        &-right {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .text {
+    &.text {
+      &--align-md {
+        &-left {
+          text-align: left;
+        }
+        &-center {
+          text-align: center;
+        }
+        &-right {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .text {
+    &.text {
+      &--align-lg {
+        &-left {
+          text-align: left;
+        }
+        &-center {
+          text-align: center;
+        }
+        &-right {
+          text-align: right;
+        }
+      }
+
+      &--style- {
+        &one {
+          font-size: 18px;
+          line-height: 30px;
+          margin: 0px 0px 35px;
+        }
+        &two {
+          font-size: 16px;
+          line-height: 26px;
+          margin: 0px 0px 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .text {
+    &.text {
+      &--align-xl {
+        &-left {
+          text-align: left;
+        }
+        &-center {
+          text-align: center;
+        }
+        &-right {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

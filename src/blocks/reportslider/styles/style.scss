@@ -1,0 +1,179 @@
+.report-slider {
+  margin: 0px 0px 20px;
+  .row {
+    > .col{
+      &:first-child {
+        margin: 0px auto;
+      }
+      &:not(:first-child) {
+        margin-left: auto;
+        .col__content{
+          height: auto;
+        }
+      }
+    }
+  }
+  .report-slider {
+    &__item {
+      padding: 20px;
+      background-color: $theme-color-two;
+      .report-slider {
+        &__detail {
+          display: block;
+          font-family: $theme-font-one;
+          font-size: 15px;
+          line-height: 24px;
+          font-weight: 400;
+          color: $theme-color-three;
+          margin: 0px 0px 30px;
+        }
+        &__name {
+          font-family: $theme-font-one;
+          font-size: 15px;
+          line-height: 24px;
+          font-weight: 400;
+          color: $theme-color-six;
+          margin: 0px;
+        }
+        &__degree {
+          padding: 0px 0px 15px;
+          margin: 0px 0px 15px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background-color: $theme-color-six;
+            width: 80px;
+            height: 2px;
+          }
+        }
+      }
+    }
+    &__arrows {
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-basis: calc(91.6666666667%);
+      max-width: calc(91.6666666667%);
+      position: relative;
+
+      button {
+        width: 55px;
+        height: 55px;
+        border: 1px solid $theme-color-seven;
+        position: relative;
+        background: transparent;
+        cursor: pointer;
+        order: 2;
+        display: block;
+        // margin-top: 10px;
+        &.splide__arrow--prev {
+          order: 1;
+          margin-right: 10px;
+          &::after {
+            transform: rotate(313deg);
+            left: 6px;
+          }
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          background: transparent;
+          text-indent: -9999px;
+          border-top: 2px solid $theme-color-seven;
+          border-left: 2px solid $theme-color-seven;
+          text-decoration: none;
+          color: transparent;
+          transform: rotate(135deg);
+          width: 8px;
+          height: 8px;
+          left: -4px;
+          right: 0px;
+          top: 0px;
+          bottom: 0px;
+          margin: auto;
+        }
+      }
+    }
+    &__link {
+      padding: 13px 20px;
+      font-family: $theme-font-one;
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 400;
+      display: inline-block;
+      color: $theme-color-seven;
+      border: 1px solid $theme-color-seven;
+      text-decoration: none;
+      order: 3;
+      margin-top: 10px;
+    }
+  }
+}
+@media screen and (min-width: 481px) {
+  .report-slider {
+    margin: 0px 0px 60px;
+    .report-slider {
+      &__item {
+        .report-slider {
+          &__detail {
+            margin: 0px 0px 25px;
+          }
+        }
+      }
+      &__arrows {
+        justify-content: flex-end;
+        button {
+          order: 3;
+          &.splide__arrow--prev {
+            order: 1;
+          }
+        }
+      }
+      &__link {
+        order: 2;
+        margin-right: 10px;
+        margin-top: 0px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .report-slider {
+    margin: 0px;
+    .row {
+      > .col:first-child {
+        margin-right: 0px;
+      }
+    }
+    .report-slider {
+      &__item {
+        padding: 40px 40px 20px 40px;
+        .report-slider {
+          &__info {
+            .text {
+              margin: 0px 0px 20px;
+            }
+          }
+          &__degree {
+            padding: 0px 0px 10px;
+            margin-bottom: 0px;
+          }
+          &__detail {
+            margin: 10px 0px 30px;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+      &__arrows {
+        margin: 80px 38.8px 0 auto;
+      }
+    }
+  }
+}

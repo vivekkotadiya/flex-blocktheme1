@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/sectionpattern",
+  "version": "0.1.5",
+  "title": "Pattern",
+  "category": "block-category-sections",
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "topPadding": {
+      "type": "number",
+      "default": "1"
+    },
+    "bottomPadding": {
+      "type": "number",
+      "default": "1"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "linear-gradient(135deg, #7A8D96 0%, #BA2B2B 100%)"
+    },
+    "backgroundColorClass": {
+      "type": "string",
+      "default": "gradient"
+    },
+    "shapeTop": {
+      "type": "boolean",
+      "default": false
+    },
+    "shapeBottom": {
+      "type": "boolean",
+      "default": false
+    },
+    "shapePosition": {
+      "type": "string",
+      "default": "leftToright"
+    },
+    "showLogo": {
+      "type": "boolean",
+      "default": false
+    },
+    "LogoColor": {
+      "type": "string",
+      "default": "light"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "keywords": ["section", "block", "pattern"],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

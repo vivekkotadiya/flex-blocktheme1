@@ -1,0 +1,120 @@
+.card-icon {
+  width: 100%;
+  margin: 0 0 var(--gap) 0;
+  background-color: $theme-color-two;
+  padding: 40px 20px 20px;
+
+  .card-icon {
+
+    &__visual {
+      padding: 20px 20px;
+      position: relative;
+      width: 80px;
+      margin: 0px auto 30px;
+      text-align: center;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 27px;
+        height: 27px;
+        position: absolute;
+      }
+
+      &::before {
+        left: 0px;
+        top: 0px;
+        border-top: 4px solid $theme-color-eight;
+        border-left: 4px solid $theme-color-eight;
+      }
+
+      &::after {
+        bottom: 0px;
+        right: 0px;
+        border-bottom: 4px solid $theme-color-eight;
+        border-right: 4px solid $theme-color-eight;
+      }
+
+      @each $color in $theme-color-set {
+        $color-name: nth($color, 1);
+        $color-value: nth($color, 2);
+        &--color-#{$color-name} {
+          &::before {
+            border-top-color: $color-value;
+            border-left-color: $color-value;
+          }
+          &::after {
+            border-bottom-color: $color-value;
+            border-right-color: $color-value;
+          }
+        }
+        .icon--color-#{$color-name} {
+          color: $color-value;
+        }
+      }
+
+      i {
+        font-size: 35px;
+        font-family: "iconfont";
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .card-icon {
+
+    .card-icon {
+
+      &__visual {
+        width: 85px;
+        margin-bottom: 28px;
+
+        &::before,
+        &::after {
+          width: 26px;
+          height: 26px;
+        }
+
+        &::before {
+          border-top-width: 5px;
+          border-left-width: 5px;
+        }
+
+        &::after {
+          border-bottom-width: 5px;
+          border-right-width: 5px;
+        }
+
+        i {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .card-icon {
+    padding: 50px 20px 20px;
+
+    .card-icon {
+
+      &__visual {
+        width: 90px;
+        margin-bottom: 48px;
+
+        i {
+          font-size: 47px;
+        }
+      }
+    }
+  }
+}

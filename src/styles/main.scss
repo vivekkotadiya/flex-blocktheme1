@@ -1,0 +1,77 @@
+@import "./_variable.scss";
+@import "./_global.scss";
+@import "./_typografie.scss";
+@import "./_icons.scss";
+
+/*---thirdparty--*/
+@import "@splidejs/splide/css/core";
+
+/*---Blocks--*/
+@import "../blocks/postcontent/styles/style.scss";
+@import "../blocks/header/styles/style.scss";
+@import "../blocks/navigation/styles/style.scss";
+@import "../blocks/footer/styles/style.scss";
+
+@import "../blocks/section/styles/style.scss";
+@import "../blocks/sectionpattern/styles/style.scss";
+@import "../blocks/row/styles/style.scss";
+@import "../blocks/column/styles/style.scss";
+
+@import "../blocks/headline/styles/style.scss";
+@import "../blocks/headlinespecial/styles/style.scss";
+@import "../blocks/paragraph/styles/style.scss";
+@import "../blocks/button/styles/style.scss";
+@import "../blocks/list/styles/style.scss";
+@import "../blocks/listarrow/styles/style.scss";
+@import "../blocks/image/styles/style.scss";
+@import "../blocks/icon/styles/style.scss";
+@import "../blocks/divider/styles/style.scss";
+
+@import "../blocks/box/styles/style.scss";
+@import "../blocks/boxbutton/styles/style.scss";
+
+@import "../blocks/accordion/styles/style.scss";
+@import "../blocks/listlink/styles/style.scss";
+@import "../blocks/listicon/styles/style.scss";
+@import "../blocks/tabs/styles/style.scss";
+
+@import "../blocks/bloglisting/styles/style.scss";
+@import "../blocks/teamlisting/styles/style.scss";
+@import "../blocks/joblisting/styles/style.scss";
+@import "../blocks/eventlisting/styles/style.scss";
+@import "../blocks/courselisting/styles/style.scss";
+@import "../blocks/partnerlisting/styles/style.scss";
+@import "../blocks/reportlisting/styles/style.scss";
+
+@import "../blocks/reportslider/styles/style.scss";
+
+@import "../blocks/blogsection/styles/style.scss";
+
+@import "../blocks/blogpreview/styles/style.scss";
+@import "../blocks/partnerpreview/styles/style.scss";
+@import "../blocks/coursepreview/styles/style.scss";
+
+@import "../blocks/form/styles/style.scss";
+
+@import "../blocks/youtubesmall/styles/style.scss";
+@import "../blocks/youtubebig/styles/style.scss";
+@import "../blocks/youtubelightbox/styles/style.scss";
+
+@import "../blocks/contactperson/styles/style.scss";
+
+@import "../blocks/teasermain/styles/style.scss";
+@import "../blocks/teasersmall/styles/style.scss";
+@import "../blocks/teaserstudy/styles/style.scss";
+@import "../blocks/blogdetail/styles/style.scss";
+@import "../blocks/eventdetail/styles/style.scss";
+@import "../blocks/jobdetail/styles/style.scss";
+@import "../blocks/blogoverview/styles/style.scss";
+
+@import "../blocks/cardsstudyjobs/styles/style.scss";
+@import "../blocks/cardteaser/styles/style.scss";
+@import "../blocks/cardicon/styles/style.scss";
+@import "../blocks/counter/styles/style.scss";
+@import "../blocks/timeline/styles/style.scss";
+@import "../blocks/testimonialslider/styles/style.scss";
+@import "../blocks/dozentenslider/styles/style.scss";
+@import "../blocks/cardsslider/styles/style.scss";

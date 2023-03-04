@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/listarrow",
+  "version": "0.1.5",
+  "title": "List Arrow",
+  "category": "block-category-advanced",
+  "keywords": ["list", "item", "arrow", "list Arrow"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "listColor": {
+      "type": "string",
+      "default": "#000"
+    },
+    "listColorClass": {
+      "type": "string",
+      "default": "eight"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": ["smt-theme/column"],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

@@ -1,0 +1,13 @@
+#webpack config
+webpack.config.js
+
+#package.json
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+

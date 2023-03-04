@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/divider",
+  "version": "0.1.5",
+  "title": "Divider",
+  "category": "block-category-basic",
+  "keywords": [
+    "divider",
+    "spacer"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "dividerColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "dividerColorClass": {
+      "type": "string",
+      "default": "eight"
+    },
+    "paddingTop": {
+      "type": "string",
+      "default": "1"
+    },
+    "paddingBottom": {
+      "type": "string",
+      "default": "1"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": [
+    "smt-theme/section",
+    "smt-theme/sectionpattern",
+    "smt-theme/tabcontent",
+    "smt-theme/column",
+    "smt-theme/blogcolumn"
+  ],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

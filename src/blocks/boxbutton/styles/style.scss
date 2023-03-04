@@ -1,0 +1,59 @@
+.box-button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px dashed $theme-color-seven;
+  padding: 20px;
+  width: 100%;
+  margin: 0 0 var(--gap);
+
+  .box-button {
+    
+    &__headline,
+    &__text {
+      width: 100%;
+      text-decoration: none;
+    }
+  }
+
+  .button--cta {
+    width: max-content;
+  }
+
+  @each $color in $theme-color-set {
+    $color-name: nth($color, 1);
+    $color-value: nth($color, 2);
+
+    &.box-button--color-#{$color-name} {
+      border-color: $color-value;
+
+      .box-button {
+
+        &__headline,
+        &__text {
+          color: $color-value;
+        }
+      }
+
+      .button--cta {
+        color: $color-value;
+
+        .button--text {
+          color: $color-value;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .box-button {
+    padding: 25px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .box-button {
+    padding: 30px;
+  }
+}

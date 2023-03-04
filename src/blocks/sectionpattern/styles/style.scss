@@ -1,0 +1,414 @@
+.section.section--pattern {
+  @for $i from 0 through $section-padding-count {
+    $section-padding: nth($section-padding-xs, ($i + 2));
+
+    &.section--pd-top-#{$i} {
+      padding-top: $section-padding + 60px;
+    }
+    &.section--pd-bottom-#{$i} {
+      padding-bottom: $section-padding + 60px;
+    }
+  }
+
+  @each $color in $theme-color-set {
+    $color-name: nth($color, 1);
+    $color-value: nth($color, 2);
+
+    &.section--color-#{$color-name} {
+      background-color: $color-value;
+    }
+  }
+
+  &.section--color-gradient {
+    background: linear-gradient(135deg, #7a8d96 0%, #ba2b2b 100%);
+  }
+
+  &.section--shape {
+    &-top {
+      margin-top: -61px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &.section--shape {
+        &-left {
+          clip-path: polygon(0 0, 100% 60px, 100% 100%, 0 100%);
+        }
+
+        &-right {
+          clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+    }
+
+    &-bottom {
+      margin-bottom: -61px;
+
+      &.section--shape {
+        &-left {
+          clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 60px), 0 100%);
+        }
+
+        &-right {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% calc(100% - 60px));
+        }
+      }
+    }
+
+    &-both {
+      margin: -61px 0 -61px 0;
+
+      &:first-child {
+        margin: 0 0 -61px 0;
+      }
+
+      &.section--shape {
+        &-left {
+          clip-path: polygon(0 0, 100% 60px, 100% calc(100% - 60px), 0% 100%);
+        }
+
+        &-right {
+          clip-path: polygon(0 60px, 100% 0%, 100% 100%, 0 calc(100% - 60px));
+        }
+      }
+    }
+  }
+
+  .section {
+    &__background {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../assets/images/smt-background-shape.svg");
+      background-size: auto;
+      background-repeat: repeat-y;
+      background-position: top;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .section.section--pattern {
+    @each $padding in $section-padding-set {
+      $padding-name: nth($padding, 1);
+
+      @if ($padding-name == "sm") {
+        @for $i from 0 through $section-padding-count {
+          $section-padding: nth($padding, ($i + 2));
+
+          &.section--pd-top-#{$i} {
+            padding-top: $section-padding + 80px;
+          }
+          &.section--pd-bottom-#{$i} {
+            padding-bottom: $section-padding + 80px;
+          }
+        }
+      }
+    }
+
+    &.section--shape {
+      &-top {
+        margin-top: -81px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(0 0, 100% 80px, 100% 100%, 0 100%);
+          }
+
+          &-right {
+            clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%);
+          }
+        }
+      }
+
+      &-bottom {
+        margin-bottom: -81px;
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 80px), 0 100%);
+          }
+
+          &-right {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% calc(100% - 80px));
+          }
+        }
+      }
+
+      &-both {
+        margin: -81px 0 -81px 0;
+
+        &:first-child {
+          margin: 0 0 -81px 0;
+        }
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(0 0, 100% 80px, 100% calc(100% - 80px), 0% 100%);
+          }
+
+          &-right {
+            clip-path: polygon(0 80px, 100% 0%, 100% 100%, 0 calc(100% - 80px));
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .section.section--pattern {
+    @each $padding in $section-padding-set {
+      $padding-name: nth($padding, 1);
+
+      @if ($padding-name == "md") {
+        @for $i from 0 through $section-padding-count {
+          $section-padding: nth($padding, ($i + 2));
+
+          &.section--pd-top-#{$i} {
+            padding-top: $section-padding + 100px;
+          }
+          &.section--pd-bottom-#{$i} {
+            padding-bottom: $section-padding + 100px;
+          }
+        }
+      }
+    }
+
+    &.section--shape {
+      &-top {
+        margin-top: -101px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 100%);
+          }
+
+          &-right {
+            clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%);
+          }
+        }
+      }
+
+      &-bottom {
+        margin-bottom: -101px;
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 100px), 0 100%);
+          }
+
+          &-right {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% calc(100% - 100px));
+          }
+        }
+      }
+
+      &-both {
+        margin: -101px 0 -101px 0;
+
+        &:first-child {
+          margin: 0 0 -101px 0;
+        }
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(
+              0 0,
+              100% 100px,
+              100% calc(100% - 100px),
+              0% 100%
+            );
+          }
+
+          &-right {
+            clip-path: polygon(
+              0 100px,
+              100% 0%,
+              100% 100%,
+              0 calc(100% - 100px)
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .section.section--pattern {
+    @each $padding in $section-padding-set {
+      $padding-name: nth($padding, 1);
+
+      @if ($padding-name == "lg") {
+        @for $i from 0 through $section-padding-count {
+          $section-padding: nth($padding, ($i + 2));
+
+          &.section--pd-top-#{$i} {
+            padding-top: $section-padding + 120px;
+          }
+          &.section--pd-bottom-#{$i} {
+            padding-bottom: $section-padding + 120px;
+          }
+        }
+      }
+    }
+
+    &.section--shape {
+      &-top {
+        margin-top: -121px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(0 0, 100% 120px, 100% 100%, 0 100%);
+          }
+
+          &-right {
+            clip-path: polygon(0 120px, 100% 0, 100% 100%, 0 100%);
+          }
+        }
+      }
+
+      &-bottom {
+        margin-bottom: -121px;
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 120px), 0 100%);
+          }
+
+          &-right {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% calc(100% - 120px));
+          }
+        }
+      }
+
+      &-both {
+        margin: -121px 0 -121px 0;
+
+        &:first-child {
+          margin: 0 0 -121px 0;
+        }
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(
+              0 0,
+              100% 120px,
+              100% calc(100% - 120px),
+              0% 100%
+            );
+          }
+
+          &-right {
+            clip-path: polygon(
+              0 120px,
+              100% 0%,
+              100% 100%,
+              0 calc(100% - 120px)
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .section.section--pattern {
+    @each $padding in $section-padding-set {
+      $padding-name: nth($padding, 1);
+
+      @if ($padding-name == "xl") {
+        @for $i from 0 through $section-padding-count {
+          $section-padding: nth($padding, ($i + 2));
+
+          &.section--pd-top-#{$i} {
+            padding-top: $section-padding + 140px;
+          }
+          &.section--pd-bottom-#{$i} {
+            padding-bottom: $section-padding + 140px;
+          }
+        }
+      }
+    }
+
+    &.section--shape {
+      &-top {
+        margin-top: -141px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(0 0, 100% 140px, 100% 100%, 0 100%);
+          }
+
+          &-right {
+            clip-path: polygon(0 140px, 100% 0, 100% 100%, 0 100%);
+          }
+        }
+      }
+
+      &-bottom {
+        margin-bottom: -141px;
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 140px), 0 100%);
+          }
+
+          &-right {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% calc(100% - 140px));
+          }
+        }
+      }
+
+      &-both {
+        margin: -141px 0 -141px 0;
+
+        &:first-child {
+          margin: 0 0 -141px 0;
+        }
+
+        &.section--shape {
+          &-left {
+            clip-path: polygon(
+              0 0,
+              100% 140px,
+              100% calc(100% - 140px),
+              0% 100%
+            );
+          }
+
+          &-right {
+            clip-path: polygon(
+              0 140px,
+              100% 0%,
+              100% 100%,
+              0 calc(100% - 140px)
+            );
+          }
+        }
+      }
+    }
+  }
+}

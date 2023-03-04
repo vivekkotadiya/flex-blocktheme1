@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/timelineitem",
+  "version": "0.1.5",
+  "title": "Timeline Item",
+  "category": "theme",
+  "keywords": ["timeline", "item"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "itemId": {
+      "type": "number",
+      "default": 1
+    },
+    "itemColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "itemColorClass": {
+      "type": "string",
+      "default": "eight"
+    },
+    "orientation": {
+      "type": "string",
+      "default": "left"
+    },
+    "tagContent": {
+      "type": "string",
+      "source": "html",
+      "selector": ".timeline-item__tag"
+    }
+  },
+  "parent": ["smt-theme/timeline"],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

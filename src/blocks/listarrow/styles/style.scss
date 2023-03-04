@@ -1,0 +1,106 @@
+.list-arrow {
+  margin: 0px 0px 20px;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding: 17px 15px 15px 65px;
+    border-width: 1px;
+    border-style: dashed;
+    margin-bottom: 10px;
+    font-family: $theme-font-one;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 33px;
+      height: 33px;
+      border-width: 1px;
+      border-style: solid;
+      left: 12px;
+      top: 11px;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      text-indent: -9999px;
+      border-top-width: 2px;
+      border-left-width: 2px;
+      border-top-style: solid;
+      border-left-style: solid;
+      text-decoration: none;
+      color: transparent;
+      transform: rotate(135deg);
+      left: 25px;
+      top: 26px;
+    }
+  }
+}
+
+.list-arrow {
+  &.list-arrow--color {
+    @each $color in $theme-color-set {
+      $color-name: nth($color, 1);
+      $color-value: nth($color, 2);
+
+      &-#{$color-name} {
+        color: $color-value;
+        li {
+          border-color: $color-value;
+          &::before {
+            border-color: $color-value;
+          }
+          &::after {
+            border-top-color: $color-value;
+            border-left-color: $color-value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $color in $theme-color-set {
+  $color-name: nth($color, 1);
+  $color-link: nth($color, 4);
+
+  .section--bg-#{$color-name} {
+    .list-arrow {
+      a {
+        color: $color-link;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .list-arrow {
+    margin: 0px 0px 40px;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .list-arrow {
+    margin: 0px 0px 60px;
+
+    li {
+      padding: 15px 15px 15px 60px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}

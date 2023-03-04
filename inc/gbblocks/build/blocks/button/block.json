@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/button",
+  "version": "0.1.0",
+  "title": "Button",
+  "category": "block-category-basic",
+  "keywords": [
+    "button",
+    "link"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "style": {
+      "type": "string",
+      "default": "two"
+    },
+    "bgcolorClass": {
+      "type": "string",
+      "default": "three"
+    },
+    "bgcolor": {
+      "type": "string",
+      "default": "#bc1717"
+    },
+    "widthXs": {
+      "type": "string",
+      "default": "inline"
+    },
+    "widthSm": {
+      "type": "string",
+      "default": "inline"
+    },
+    "widthMd": {
+      "type": "string",
+      "default": "inline"
+    },
+    "widthLg": {
+      "type": "string",
+      "default": "inline"
+    },
+    "widthXl": {
+      "type": "string",
+      "default": "inline"
+    },
+    "linkTarget": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "target"
+    },
+    "downloadable": {
+      "type": "boolean",
+      "default": false
+    },
+    "text": {
+      "type": "string",
+      "source": "html",
+      "selector": ".button--text"
+    },
+    "url": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "href"
+    },
+    "AlignXs": {
+      "type": "string",
+      "default": "left"
+    },
+    "AlignSm": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignMd": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignLg": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignXl": {
+      "type": "string",
+      "default": ""
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": [
+    "smt-theme/column",
+    "smt-theme/blogcolumn"
+  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

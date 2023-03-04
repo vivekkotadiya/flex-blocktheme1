@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/listicon",
+  "version": "0.1.5",
+  "title": "List Icon",
+  "category": "block-category-advanced",
+  "keywords": [
+    "list",
+    "icon"
+  ],
+  "description": "",
+  "attributes": {
+    "ItemArrays": {
+      "type": "string",
+      "default": [
+        "List Icon 1"
+      ]
+    },
+    "itemCount": {
+      "type": "number",
+      "default": 1
+    },
+    "listIconColor": {
+      "type": "string",
+      "default": "#000"
+    },
+    "listIconColorClass": {
+      "type": "string",
+      "default": "eight"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "textdomain": "smt-theme",
+  "parent": [
+    "smt-theme/column"
+  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

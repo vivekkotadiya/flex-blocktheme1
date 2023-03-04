@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/counter",
+  "version": "0.1.5",
+  "title": "Counter",
+  "category": "block-category-advanced",
+  "keywords": [
+    "counter"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "counterColor": {
+      "type": "string",
+      "default": "#39515E"
+    },
+    "counterColorClass": {
+      "type": "string",
+      "default": "seven"
+    },
+    "counterCornorColor": {
+      "type": "string",
+      "default": "#BC1717"
+    },
+    "counterCornorColorClass": {
+      "type": "string",
+      "default": "three"
+    },
+    "counterMain": {
+      "type": "string",
+      "source": "html",
+      "selector": ".counter__text-main",
+      "default": ""
+    },
+    "counterSubText": {
+      "type": "string",
+      "source": "html",
+      "selector": ".counter__text-sub",
+      "default": ""
+    },
+    "number": {
+      "type": "number",
+      "default": 0
+    },
+    "numberType": {
+      "type": "string",
+      "default": "%"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": [
+    "smt-theme/column"
+  ],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file./index.css"
+}

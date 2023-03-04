@@ -1,0 +1,76 @@
+@import "../../../styles/_variable.scss";
+
+.section .wp-block[data-type="smt-theme/timeline"] > .timeline__content {
+  > .block-list-appender {
+    position: relative;
+    display: none;
+    width: 100%;
+    bottom: -120px;
+
+    > button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      padding: 12px;
+      box-shadow: inset 0 0 0 1px #007cba;
+      color: #007cba;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.wp-block[data-type="smt-theme/timeline"].is-selected > .timeline__content,
+.wp-block[data-type="smt-theme/timeline"].has-child-selected
+  > .timeline__content {
+  > .block-list-appender {
+    display: block;
+  }
+  > .timeline-item.is-selected {
+    > .timeline-item__header {
+      svg {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.wp-block[data-type="smt-theme/timelineitem"]
+  > .timeline-item__content
+  > .timeline-item__content-helper {
+  > .block-list-appender {
+    button {
+      box-shadow: inset 0 0 0 1px #007cba;
+      color: #007cba;
+
+      &.block-list-appender__toggle {
+        color: $theme-color-one;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.wp-block[data-type="smt-theme/timelineitem"].is-selected
+  > .timeline-item__content,
+.wp-block[data-type="smt-theme/timelineitem"].has-child-selected
+  > .timeline-item__content {
+  max-height: none;
+}
+@media screen and (min-width: 1025px) {
+  .section .wp-block[data-type="smt-theme/timeline"] > .timeline__content {
+    > .block-list-appender {
+      bottom: -60px;
+    }
+  }
+  .timeline{
+    .timeline__connector{
+      height: calc(100% - 50px);
+      &--arrow{
+        bottom: 0px;
+      }
+    }
+  }
+}

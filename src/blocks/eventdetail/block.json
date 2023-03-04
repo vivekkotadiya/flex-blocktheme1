@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/eventdetail",
+  "version": "0.1.5",
+  "title": "Event Detail",
+  "category": "block-category-listing",
+  "keywords": ["event", "detail"],
+  "description": "",
+  "usesContext": [ "postId", "postType", "queryId" ],
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+  
+  },
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

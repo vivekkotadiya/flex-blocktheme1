@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/linkitem",
+  "version": "0.1.5",
+  "title": "Item",
+  "category": "theme",
+  "keywords": [
+    "link",
+    "item"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "itemId": {
+      "type": "number",
+      "default": 1
+    },
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": ".list-link__item--content"
+    },
+    "url": {
+      "type": "string",
+      "source": "attribute",
+      "selector": ".list-link__item--content",
+      "attribute": "href"
+    },
+    "linkTarget": {
+      "type": "string",
+      "source": "attribute",
+      "selector": ".list-link__item--content",
+      "attribute": "target"
+    }
+  },
+  "parent": [
+    "smt-theme/listlink"
+  ],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

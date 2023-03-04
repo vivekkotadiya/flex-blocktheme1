@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/cardicon",
+  "version": "0.1.5",
+  "title": "Card Icon",
+  "category": "block-category-listing",
+  "keywords": ["card", "Icon"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "cardHIconeadColor": {
+      "type": "string",
+      "default": "#BC1717"
+    },
+    "cardIconHeadColorClass": {
+      "type": "string",
+      "default": "three"
+    },
+    "cardIconHead": {
+      "type": "string",
+      "source": "html",
+      "selector": ".card-icon__headline",
+      "default": ""
+    },
+    "cardIconHeadLevel": {
+      "type": "string",
+      "default": "span"
+    },
+    "cardIconTextColor": {
+      "type": "string",
+      "default": "#39515E"
+    },
+    "cardIconTextColorClass": {
+      "type": "string",
+      "default": "seven"
+    },
+    "cardIconText": {
+      "type": "string",
+      "source": "html",
+      "selector": ".card-icon__text",
+      "default": ""
+    },
+    "cardIconTextTag": {
+      "type": "string",
+      "default": "span"
+    },
+    "cardiconColor": {
+      "type": "string",
+      "default": "#607886"
+    },
+    "cardiconColorClass": {
+      "type": "string",
+      "default": "six"
+    },
+    "cardiconClass": {
+      "type": "string",
+      "default": "icon-asterisk"
+    },
+    "cardiconBorderColor": {
+      "type": "string",
+      "default": "#BC1717"
+    },
+    "cardiconBorderColorClass": {
+      "type": "string",
+      "default": "three"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": ["smt-theme/column"],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

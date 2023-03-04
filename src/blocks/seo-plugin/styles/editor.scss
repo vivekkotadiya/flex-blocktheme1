@@ -1,0 +1,17 @@
+.block-editor-inserter__preview-container {
+  display: none;
+}
+.smt-theme_text_area {
+  width: 100%;
+  textarea {
+    resize: none;
+  }
+}
+
+.smt-theme_hide_panel_icon {
+  .components-panel__body-toggle {
+    .components-panel__icon {
+      display: none;
+    }
+  }
+}

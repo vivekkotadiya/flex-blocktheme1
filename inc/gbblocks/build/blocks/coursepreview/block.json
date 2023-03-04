@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/coursepreview",
+  "version": "0.1.5",
+  "title": "Course Preview",
+  "category": "block-category-preview",
+  "keywords": [
+    "course",
+    "preview"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "xsimageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "webpxsImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "mdimageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "webpmdImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "imageDefaultAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "imgOrientation": {
+      "type": "string",
+      "default": "right"
+    },
+    "overlayText1": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayText2": {
+      "type": "string",
+      "default": ""
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": [
+    "smt-theme/section",
+    "smt-theme/sectionpattern",
+    "smt-theme/tabcontent"
+  ],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

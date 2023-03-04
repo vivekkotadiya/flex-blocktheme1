@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/box",
+  "version": "0.1.0",
+  "title": "Box",
+  "category": "block-category-advanced",
+  "keywords": ["Box"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "boxColor": {
+      "type": "string",
+      "default": "#39515E"
+    },
+    "colorClass": {
+      "type": "string",
+      "default": "seven"
+    },
+    "level": {
+      "type": "string",
+      "default": "span"
+    },
+    "tag": {
+      "type": "string",
+      "default": "p"
+    },
+    "boxHeadline": {
+      "type": "string",
+      "source": "html",
+      "selector": ".box__headline",
+      "default": ""
+    },
+    "boxParagraph": {
+      "type": "string",
+      "source": "html",
+      "selector": ".box__text",
+      "default": ""
+    },
+    "url": {
+      "type": "string",
+      "source": "attribute",
+      "selector": ".box",
+      "attribute": "href"
+    },
+    "linkTarget": {
+      "type": "string",
+      "source": "attribute",
+      "selector": ".box",
+      "attribute": "target"
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": ["smt-theme/column"],
+  "editorScript": "file:./index.js"
+}

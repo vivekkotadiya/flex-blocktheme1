@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/courselisting",
+  "version": "0.1.5",
+  "title": "Course Listing",
+  "category": "block-category-listing",
+  "keywords": ["course", "list"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "degree": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": ""
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "parent": ["smt-theme/section", "smt-theme/sectionpattern", "smt-theme/tabcontent"],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

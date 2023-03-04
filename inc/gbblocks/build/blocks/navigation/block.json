@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/navigation",
+  "version": "0.1.5",
+  "title": "Navigation",
+  "category": "block-category-not-use",
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "anchor": {
+      "type": "string"
+    },
+    "menu": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": [
+    "smt-theme/header",
+    "smt-theme/footer"
+  ],
+  "editorScript": "file:./index.js",
+  "render": "file:./register.php"
+}

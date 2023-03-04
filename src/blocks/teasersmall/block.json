@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/teasersmall",
+  "version": "0.1.5",
+  "title": "Teaser Small",
+  "category": "block-category-sections",
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "backgroundAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "backgroundDefaultAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "xlbackgroundImageId": {
+      "type": "number"
+    },
+    "xlbackgroundImagesrcArray": {
+      "type": "object"
+    },
+    "mdbackgroundImageId": {
+      "type": "number"
+    },
+    "mdbackgroundImagesrcArray": {
+      "type": "object"
+    },
+    "xsbackgroundImageId": {
+      "type": "number"
+    },
+    "xsbackgroundImagesrcArray": {
+      "type": "object"
+    },
+    "headline": {
+      "type": "string",
+      "source": "html",
+      "selector": ".headline--style-six",
+      "default": ""
+    },
+    "level": {
+      "type": "string",
+      "default": "1"
+    },
+    "headlineColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "headlineColorClass": {
+      "type": "string",
+      "default": "one"
+    },
+    "subHeadline": {
+      "type": "string",
+      "source": "html",
+      "selector": ".headline--style-three",
+      "default": ""
+    },
+    "subHeadlineLevel": {
+      "type": "string",
+      "default": "2"
+    },
+    "subHeadlineColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "subHeadlineColorClass": {
+      "type": "string",
+      "default": "one"
+    },
+    "showLogo": {
+      "type": "boolean",
+      "default": true
+    },
+    "LogoColor": {
+      "type": "string",
+      "default": "light"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "keywords": ["teaser", "small"],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

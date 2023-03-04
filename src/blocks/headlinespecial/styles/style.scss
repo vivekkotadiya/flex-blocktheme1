@@ -1,0 +1,250 @@
+// DEFINE HEADLINE COLOR SET ---------------------------------------------------
+
+.headline-special {
+  text-align: left;
+  display: block;
+  margin: 0px 0px 40px;
+
+  &.headline-special {
+    &--align-xs {
+      &-left {
+        .headline {
+          text-align: left;
+        }
+        .headline-special__separator {
+          margin-right: auto;
+          margin-left: 0px;
+        }
+      }
+
+      &-center {
+        .headline {
+          text-align: center;
+        }
+        .headline-special__separator {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      &-right {
+        .headline {
+          text-align: right;
+        }
+        .headline-special__separator {
+          margin-left: auto;
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+
+  .headline-special {
+    &__main {
+      margin: 0px 0px 6px;
+    }
+
+    &__sub {
+      margin: 0px 0px 30px;
+    }
+  }
+
+  .headline-special__separator {
+    width: 60px;
+    height: 2px;
+    display: block;
+
+    @each $color in $theme-color-set {
+      $color-name: nth($color, 1);
+      $color-value: nth($color, 2);
+
+      &--color-#{$color-name} {
+        background-color: $color-value;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .headline-special {
+    margin: 0px 0px 60px;
+
+    &.headline-special {
+      &--align-sm {
+        &-left {
+          .headline {
+            text-align: left;
+          }
+          .headline-special__separator {
+            margin-right: auto;
+            margin-left: 0px;
+          }
+        }
+
+        &-center {
+          .headline {
+            text-align: center;
+          }
+          .headline-special__separator {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        &-right {
+          .headline {
+            text-align: right;
+          }
+          .headline-special__separator {
+            margin-left: auto;
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+
+    .headline-special {
+      &__main {
+        margin: 0px 0px 15px;
+      }
+
+      &__sub {
+        margin: 0px 0px 35px;
+      }
+    }
+
+    .headline-special__separator {
+      width: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .headline-special {
+    &.headline-special {
+      &--align-md {
+        &-left {
+          .headline {
+            text-align: left;
+          }
+          .headline-special__separator {
+            margin-right: auto;
+            margin-left: 0px;
+          }
+        }
+
+        &-center {
+          .headline {
+            text-align: center;
+          }
+          .headline-special__separator {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        &-right {
+          .headline {
+            text-align: right;
+          }
+          .headline-special__separator {
+            margin-left: auto;
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .headline-special {
+    margin: 0px 0px 100px;
+
+    &.headline-special {
+      &--align-lg {
+        &-left {
+          .headline {
+            text-align: left;
+          }
+          .headline-special__separator {
+            margin-right: auto;
+            margin-left: 0px;
+          }
+        }
+
+        &-center {
+          .headline {
+            text-align: center;
+          }
+          .headline-special__separator {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        &-right {
+          .headline {
+            text-align: right;
+          }
+          .headline-special__separator {
+            margin-left: auto;
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+
+    .headline-special {
+      &__main {
+        margin: 0px 0px 10px;
+      }
+
+      &__sub {
+        margin: 0px 0px 40px;
+      }
+    }
+
+    .headline-special-separator {
+      width: 122px;
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .headline-special {
+    &.headline-special {
+      &--align-xl {
+        &-left {
+          .headline {
+            text-align: left;
+          }
+          .headline-special__separator {
+            margin-right: auto;
+            margin-left: 0px;
+          }
+        }
+
+        &-center {
+          .headline {
+            text-align: center;
+          }
+          .headline-special__separator {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        &-right {
+          .headline {
+            text-align: right;
+          }
+          .headline-special__separator {
+            margin-left: auto;
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}

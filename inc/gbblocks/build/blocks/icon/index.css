@@ -1,0 +1,81 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/icon/styles/editor.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+.smt-theme-icon-panel .components-popover__content {
+  width: 376px;
+  max-height: 443px !important;
+  overflow: hidden !important;
+  overflow-y: auto !important;
+  padding: 10px;
+  box-sizing: border-box !important;
+}
+
+.smt-theme-icon-panel .components-popover__content * {
+  box-sizing: border-box !important;
+}
+
+.smt-theme-icon-panel .components-popover__content > div {
+  height: auto;
+}
+
+.smt-theme-icon-panel.is-expanded .components-popover__content {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ul.smt-theme-icon-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 100%;
+  max-height: 180px;
+  overflow-y: scroll;
+}
+
+ul.smt-theme-icon-list li {
+  padding: 2px;
+  margin: 0;
+}
+ul.smt-theme-icon-list li.selectedicon .components-button {
+  border-color: #39515e;
+}
+
+ul.smt-theme-icon-list li .components-button {
+  display: inline-block;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  color: #39515e;
+  border: 1px solid transparent;
+  text-align: center;
+  padding: 0;
+  outline: 0;
+}
+ul.smt-theme-icon-list li .components-button:focus {
+  box-shadow: unset;
+}
+ul.smt-theme-icon-list li .components-button i {
+  font-family: "IconFont" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul.smt-theme-icon-list li .components-button:hover {
+  border-color: #39515e;
+  color: #39515e !important;
+}
+
+.gb--link-control .block-editor-link-control {
+  min-width: auto;
+}
+
+/*# sourceMappingURL=index.css.map*/

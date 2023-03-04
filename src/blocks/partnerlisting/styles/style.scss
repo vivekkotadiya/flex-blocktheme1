@@ -1,0 +1,39 @@
+.listing-partner {
+  margin-bottom: 20px;
+
+  .listing-partner {
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      background-image: radial-gradient($theme-color-one 0%, #f4f4f4 100%);
+
+      picture {
+        max-height: 100%;
+        max-width: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .listing-partner {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .listing-partner {
+    margin-bottom: 60px;
+  }
+}

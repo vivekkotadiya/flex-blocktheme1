@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/testimonialslide",
+  "version": "0.1.5",
+  "title": "Testimonial Slide",
+  "category": "theme",
+  "description": "A gutenberg block for Testimonial Slide.",
+  "supports": {
+    "multiple": true,
+    "reusable": false,
+    "html": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "xsimageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "xswebpImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number",
+      "default": ""
+    },
+    "altText": {
+      "type": "string",
+      "default": ""
+    },
+    "headlinetext": {
+      "type": "string",
+      "source": "html",
+      "selector": ".testimonial--name"
+    },
+    "headlinelevel": {
+      "type": "string",
+      "default": "4"
+    },
+    "description": {
+      "type": "string",
+      "source": "html",
+      "selector": ".testimonial--text"
+    },
+    "texttag": {
+      "type": "string",
+      "default": "p"
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": [
+    "smt-theme/testimonialslider"
+  ],
+  "editorScript": "file:./index.js"
+}

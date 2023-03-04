@@ -1,0 +1,138 @@
+.tabs {
+  position: relative;
+  margin: 0 auto 20px auto;
+
+  .tabs-nav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 10px auto 60px auto;
+    max-width: 83.33333%;
+    min-width: 300px;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    &__item {
+      border: none;
+      outline: none;
+      padding: 14px; 
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      font-family: $theme-font-one;
+      cursor: pointer;
+    }
+
+    &__item:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .tabs-content {
+    position: relative;
+    width: 100%;
+
+    &__item {
+      opacity: 0;
+      position: relative;
+      transform-origin: left top;
+      transform: scaleY(0);
+      max-height: 0;
+      overflow: hidden;
+    }
+    &__item--active {
+      opacity: 1;
+      transform: scaleY(1);
+      max-height: initial;
+    }
+  }
+}
+
+body.page--animation-ready {
+  .tabs {
+    .tabs-nav {
+      &__item {
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-in-out;
+      }
+    }
+
+    .tabs-content {
+      &__item {
+        transition: opacity 0.5s ease-in-out;
+      }
+    }
+  }
+}
+
+@each $color in $theme-color-set {
+  $color-number: nth($color, 1);
+  $color-one: nth($color, 2);
+  $color-two: nth($color, 3);
+  $color-three: nth($color, 4);
+
+  .section--bg-#{$color-number} {
+    .tabs {
+      .tabs-nav {
+        &__item {
+          background-color: transparent;
+          color: #{$color-two};
+          border: 1px solid #{$color-two};
+        }
+        &__item--active {
+          background-color: #{$color-two};
+          color: #{$theme-color-one};
+          border: 1px solid #{$color-two};
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .tabs {
+    margin: 0 auto 40px auto;
+
+    .tabs-nav {
+      margin: 0 auto 80px auto;
+      min-width: 440px;
+      &__item {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .tabs {
+    .tabs-nav {
+      min-width: 740px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .tabs {
+    margin: 0 auto 60px auto;
+
+    .tabs-nav {
+      margin: 10px auto 120px auto;
+      min-width: 940px;
+      &__item {
+        font-size: 20px;
+        line-height: 27px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .tabs {
+    .tabs-nav {
+      min-width: 1340px;
+    }
+  }
+}

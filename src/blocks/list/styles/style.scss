@@ -1,0 +1,133 @@
+ul li, ol li {
+  list-style-type: none;
+}
+
+.list {
+  display: block;
+  margin: 0px 0px 20px;
+  padding: 0;
+  font-family: $theme-font-one;
+
+  li {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 15px 30px;
+
+    &::before {
+      content: "\2022";
+      font-weight: bold;
+      display: inline-block;
+      width: 22px;
+      margin-left: -22px;
+    }
+  }
+
+  &.list--style- {
+
+    &one {
+
+      li {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0px;
+          top: 6px;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+
+ol.list {
+  counter-reset: li;
+
+  li::before {
+    counter-increment: li;
+    content: "."counter(li);
+    font-weight: 400;
+    display: inline-block;
+    width: 22px;
+    margin-left: -33px;
+    margin-right: 11px;
+    text-align: right;
+    direction: rtl;
+  }
+}
+
+.list {
+
+  &.list {
+
+    @each $color in $theme-color-set {
+      $color-name: nth($color, 1);
+      $color-value: nth($color, 2);
+
+      &--color-#{$color-name} {
+        color: $color-value;
+      }
+    }
+  }
+}
+
+@each $color in $theme-color-set {
+  $color-name: nth($color, 1);
+  $color-link: nth($color, 4);
+
+  .section--bg-#{$color-name} {
+
+    .list {
+
+      a {
+        color: $color-link;
+        text-decoration: underline;
+      }
+
+      &.list--style- {
+
+        &one {
+    
+          li {
+
+            &::before {
+              background-color: $color-link;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .list {
+    margin: 0px 0px 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .list {
+    margin: 0px 0px 60px;
+
+    li {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &.list--style- {
+
+      &one {
+  
+        li {
+  
+          &::before {
+            top: 8px;
+          }
+        }
+      }
+    }
+  }
+}

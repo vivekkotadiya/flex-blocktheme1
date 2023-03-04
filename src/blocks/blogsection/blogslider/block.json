@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/blogslider",
+  "version": "0.1.5",
+  "title": "Blog Slider",
+  "category": "block-category-slider",
+  "keywords": ["blog", "list", "slider"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "listTaxonomy": {
+      "type": "array"
+    },
+    "blogsListing": {
+      "type": "boolean",
+      "default": false
+    },
+    "blogsLink": {
+      "type": "object"
+    }
+  },
+  "parent": ["smt-theme/blogsection"],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

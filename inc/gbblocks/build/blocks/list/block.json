@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/list",
+  "version": "0.1.5",
+  "title": "List",
+  "category": "block-category-basic",
+  "keywords": [
+    "list",
+    "item",
+    "list item"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "listStyle": {
+      "type": "string",
+      "default": "notset"
+    },
+    "listColor": {
+      "type": "string",
+      "default": "#000"
+    },
+    "listColorClass": {
+      "type": "string",
+      "default": "eight"
+    },
+    "listType": {
+      "type": "string",
+      "default": "unordered"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": [
+    "smt-theme/column"
+  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

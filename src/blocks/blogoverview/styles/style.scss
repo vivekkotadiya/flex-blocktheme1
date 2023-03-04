@@ -1,0 +1,118 @@
+
+.section.section--blog-featured{
+  .section {
+    &__content {
+      padding-top: 216px;
+      margin-bottom: 30px;
+      .headline{
+        &--style-two{
+          position: relative;
+          &:after{
+            content: "";
+            width: 60px;
+            height: 2px;
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: inline-block;
+            background-color: $theme-color-one;
+          }
+        }
+      }
+      .image{
+        margin-bottom: 0px;
+      }
+      .col{
+        &__header{
+          margin-bottom: 40px;
+        }
+        &__blog{
+          background-color: $theme-color-one;
+          border: 4px solid $theme-color-two;
+          padding: 20px;
+        }
+      }
+      .blog--date{
+        font-size: 14px;
+        line-height: 18px;
+        color: $theme-color-three;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-family: $theme-font-one;
+      }
+      .blog--tags{
+        font-family: $theme-font-one;
+        margin-left: -10px;
+        margin-bottom: 20px;
+        span{
+          display: inline-block;
+          font-size: 12px;
+          line-height: 12px;
+          padding: 10px 16px;
+          border: 1px solid $theme-color-seven;
+          color: $theme-color-seven;
+          margin-bottom: 10px;
+          margin-left: 10px;
+        }
+      }
+    }
+    &__background{
+      background: transparent linear-gradient(146deg, #7A8D96 20%, #BA2B2B 140%) 0% 0% no-repeat padding-box;
+      clip-path: polygon(0 0, 100% 0, 100% 63%, 0 69%);
+    }
+  }
+  .row--gap-custom {
+    --gap: 10px;
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  .section.section--blog-featured{
+    .section {
+      &__content {
+        padding-top: 274px;
+      }
+      &__background{
+        clip-path: polygon(0 0, 100% 0, 100% 79%, 0 88%) ;
+      }
+    }
+  } 
+}
+
+@media screen and (min-width: 1025px) {
+  .section.section--blog-featured{
+    .section {
+      &__content {
+        padding-top: 219px;
+        .headline{
+          &--style-three{
+            margin-bottom: 10px;
+          }
+        }
+      }
+      &__background{
+        clip-path: polygon(0 0, 100% 0, 100% 53%, 0 70%);
+      }
+    }
+  } 
+}
+
+@media screen and (min-width: 1401px) {
+  .section.section--blog-featured{
+    .section {
+      &__content {
+        .col{
+          &__header{
+            margin-bottom: 100px;
+          }
+        }
+      }
+    }
+    .row--gap-custom {
+      --gap: 16px;
+    }
+  }
+}

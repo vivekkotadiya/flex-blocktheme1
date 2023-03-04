@@ -1,0 +1,87 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed $theme-color-seven;
+  padding: 20px;
+  width: 100%;
+  margin: 0 0 var(--gap);
+  text-decoration: none;
+
+  .box {
+    
+    &__headline,
+    &__text,
+    &__visual {
+      text-decoration: none;
+    }
+
+    &__visual {
+      display: block;
+      text-align: right;
+      border: 1px solid $theme-color-seven;
+      width: 35px;
+      height: 35px;
+      position: relative;
+      margin: auto 0 0 auto;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: transparent;
+        text-indent: -9999px;
+        border-top-width: 2px;
+        border-left-width: 2px;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-top-color: $theme-color-seven;
+        border-bottom-color: $theme-color-seven;
+        color: transparent;
+        transform: rotate(135deg);
+        right: 15px;
+        top: 12px;
+      }
+    }
+  }
+
+  @each $color in $theme-color-set {
+    $color-name: nth($color, 1);
+    $color-value: nth($color, 2);
+
+    &.box--color-#{$color-name} {
+      border-color: $color-value;
+
+      .box {
+
+        &__headline,
+        &__text {
+          color: $color-value;
+        }
+
+        &__visual {
+          border-color: $color-value;
+
+          &::after {
+            border-top-color: $color-value;
+            border-bottom-color: $color-value;
+            color: $color-value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .box {
+    padding: 25px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .box {
+    padding: 30px;
+  }
+}

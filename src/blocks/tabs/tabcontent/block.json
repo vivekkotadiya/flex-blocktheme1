@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/tabcontent",
+  "version": "0.1.5",
+  "title": "Item",
+  "category": "theme",
+  "description": "",
+  "supports": {
+    "multiple": true,
+    "reusable": false,
+    "html": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "tabTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "tabClientId": {
+      "type": "string"
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": ["smt-theme/tabs"],
+  "editorScript": "file:./index.js"
+}

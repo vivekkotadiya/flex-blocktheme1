@@ -1,0 +1,155 @@
+.lightbox-youtube {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  &.lightbox-youtube--fadeIn {
+    animation: youtubeFadeOut 1.5s;
+    display: none;
+  }
+
+  &.lightbox-youtube--opened {
+    animation: youtubeFadeIn 1.5s;
+    display: block;
+  }
+
+  .lightbox-youtube {
+    &__container {
+      max-width: 280px;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__video-helper {
+      position: relative;
+      padding-bottom: 56.52%;
+      padding-top: 0;
+      height: 0;
+      overflow: hidden;
+      margin-top: 157px;
+    }
+
+    &__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__close-helper {
+      border: 1px solid $theme-color-one;
+      padding: 0px;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+
+    &__close {
+      opacity: 1;
+      border: 0px;
+      cursor: pointer;
+      width: 38px;
+      height: 38px;
+      background-color: transparent;
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        content: " ";
+        height: 12.17px;
+        width: 2px;
+        margin: auto;
+        background-color: $theme-color-one;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+@keyframes youtubeFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes youtubeFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .lightbox-youtube {
+    .lightbox-youtube {
+      &__container {
+        max-width: 440px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .lightbox-youtube {
+    .lightbox-youtube {
+      &__container {
+        max-width: 520px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .lightbox-youtube {
+    .lightbox-youtube {
+      &__container {
+        max-width: calc(100% - 248px);
+      }
+      &__close-helper {
+        right: 67px;
+        top: 61px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .lightbox-youtube {
+    .lightbox-youtube {
+      &__container {
+        max-width: 1000px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1919px) {
+  .lightbox-youtube {
+    .lightbox-youtube {
+      &__container {
+        max-width: 1407px;
+      }
+    }
+  }
+}

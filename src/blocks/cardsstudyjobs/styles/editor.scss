@@ -1,0 +1,23 @@
+.wp-block[data-type="smt-theme/cardsstudyjobs"] > .row-wrapper > .row {
+
+    > .block-list-appender  {
+        display: none;
+    }  
+}
+  
+.wp-block[data-type="smt-theme/cardsstudyjobs"].is-selected > .row-wrapper > .row {
+
+    > .block-list-appender  {
+        position: relative;
+        display: block;
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 0 0 var(--gap) 0;
+  
+        > button {
+            box-shadow: inset 0 0 0 1px #007cba;
+            color: #007cba;
+            background: transparent;
+        }  
+    }
+}

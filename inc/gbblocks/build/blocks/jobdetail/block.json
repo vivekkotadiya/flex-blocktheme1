@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/jobdetail",
+  "version": "0.1.5",
+  "title": "Job Detail",
+  "category": "block-category-listing",
+  "keywords": [
+    "Job",
+    "detail"
+  ],
+  "description": "",
+  "usesContext": [
+    "postId",
+    "postType",
+    "queryId"
+  ],
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "showLogo": {
+      "type": "boolean",
+      "default": true
+    },
+    "LogoColor": {
+      "type": "string",
+      "default": "dark"
+    }
+  },
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

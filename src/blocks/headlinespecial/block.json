@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/headlinespecial",
+  "version": "0.1.5",
+  "title": "Headline Special",
+  "category": "block-category-advanced",
+  "keywords": ["title", "subtitle", "special", "sub", "main"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "mainHeadline": {
+      "type": "string",
+      "source": "html",
+      "selector": ".headline-special__main",
+      "default": ""
+    },
+    "mainHeadLevel": {
+      "type": "string",
+      "default": "2"
+    },
+    "subHeadline": {
+      "type": "string",
+      "source": "html",
+      "selector": ".headline-special__sub",
+      "default": ""
+    },
+    "subHeadLevel": {
+      "type": "string",
+      "default": "3"
+    },
+    "mainHeadColor": {
+      "type": "string",
+      "default": "#BC1717"
+    },
+    "mainHeadColorClass": {
+      "type": "string",
+      "default": "three"
+    },
+    "subHeadColor": {
+      "type": "string",
+      "default": "#39515E"
+    },
+    "subHeadColorClass": {
+      "type": "string",
+      "default": "seven"
+    },
+    "lineColor": {
+      "type": "string",
+      "default": "#39515E"
+    },
+    "lineColorClass": {
+      "type": "string",
+      "default": "seven"
+    },
+    "AlignXs": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignSm": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignMd": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignLg": {
+      "type": "string",
+      "default": ""
+    },
+    "AlignXl": {
+      "type": "string",
+      "default": ""
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "smt-theme",
+  "parent": ["smt-theme/column", "smt-theme/blogcolumn"],
+  "editorScript": "file:./index.js"
+}

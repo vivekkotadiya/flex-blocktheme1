@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/studyjobitem",
+  "version": "0.1.5",
+  "title": "Item",
+  "category": "block-category-listing",
+  "keywords": [
+    "card",
+    "study",
+    "job"
+  ],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "webpImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "xsimageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "webpxsImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "mdimageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "webpmdImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "imageDefaultAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "cardHeadColor": {
+      "type": "string",
+      "default": "#39515E"
+    },
+    "cardHeadColorClass": {
+      "type": "string",
+      "default": "seven"
+    },
+    "cardHead": {
+      "type": "string",
+      "source": "html",
+      "selector": ".job-cards__item--headline",
+      "default": ""
+    },
+    "cardHeadLevel": {
+      "type": "string",
+      "default": "span"
+    },
+    "cardTextColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "cardTextColorClass": {
+      "type": "string",
+      "default": "eight"
+    },
+    "cardText": {
+      "type": "string",
+      "source": "html",
+      "selector": ".job-cards__item--text",
+      "default": ""
+    },
+    "cardTextTag": {
+      "type": "string",
+      "default": "p"
+    },
+    "cardTag": {
+      "type": "string",
+      "default": ""
+    },
+    "cardTagColor": {
+      "type": "string",
+      "default": "#BC1717"
+    },
+    "cardTagColorClass": {
+      "type": "string",
+      "default": "three"
+    }
+  },
+  "parent": [
+    "smt-theme/cardsstudyjobs"
+  ],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

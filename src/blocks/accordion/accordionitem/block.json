@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/accordionitem",
+  "version": "0.1.5",
+  "title": "Item",
+  "category": "theme",
+  "keywords": ["accordion"],
+  "description": "",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "itemId": {
+      "type": "number",
+      "default": 1
+    },
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "span"
+    }
+  },
+  "parent": ["smt-theme/accordion"],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js"
+}

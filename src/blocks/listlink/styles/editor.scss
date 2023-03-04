@@ -1,0 +1,56 @@
+.wp-block-smt-theme-listlink > .list-link,
+.wp-block-smt-theme-listlink > .list-link {
+    > .block-list-appender {
+        display: none;
+    }
+}
+
+.wp-block-smt-theme-listlink.is-selected > .list-link,
+.wp-block-smt-theme-listlink.has-child-selected > .list-link {
+    > .block-list-appender {
+        position: relative;
+        display: block;
+    
+        > button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+            padding: 12px;
+            box-shadow: inset 0 0 0 1px #007cba;
+            color: #007cba;
+            margin-bottom: 20px;
+        }
+    }
+}
+.wp-block-smt-theme-listlink{
+    .block-editor-block-list__layout .block-editor-block-list__block{
+        &:focus::after{
+            box-shadow: unset;
+        }
+    }
+    .list-link.list-link--style- {        
+        &one {
+            &.block-editor-block-list__layout .block-editor-block-list__block{
+                &:focus::after{
+                    right: 27px;
+                    top: 26px;
+                    left: unset;
+                    bottom: unset;                    
+                }
+            }
+        }
+        &two{
+            &.block-editor-block-list__layout .block-editor-block-list__block{
+                &:focus::after{
+                    left: 12px;
+                    top: 14px;
+                    right: unset;
+                    bottom: unset;     
+                }
+            }
+        }
+    }
+}

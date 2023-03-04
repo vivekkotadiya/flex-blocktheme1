@@ -1,0 +1,8 @@
+ul,
+ol {
+  li {
+    > .rich-text {
+      display: inline-block;
+    }
+  }
+}

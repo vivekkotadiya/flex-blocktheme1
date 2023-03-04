@@ -1,0 +1,240 @@
+.listing-course {
+  margin: 0 0 20px 0;
+
+  .listing-course {
+
+    &__item {
+      background: radial-gradient(circle, $theme-color-one 0%, #f4f4f4 100%);
+      padding: 20px;
+      position: relative;
+      border: 5px solid $theme-color-two;
+    }
+    
+    &__degree {
+      margin: 0;
+    }
+
+    &__headline {
+      position: relative;
+      padding: 0px 0px 15px 0px;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 80px;
+        height: 2px;
+        background-color: $theme-color-six;
+      }
+    }
+
+    &__details {
+
+      > span {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-left: 44px;
+        
+        svg {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          margin: auto 0px;
+        }
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+
+      .button--cta {
+        width: auto;
+      }
+    }
+
+    &__item--last {
+      position: relative;
+      padding: 20px;
+      border: 1px dashed $theme-color-seven;
+      background: transparent;
+      text-decoration: none;
+
+      .listing-course__icon {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        width: 35px;
+        height: 35px;
+        border: 1px solid $theme-color-seven;
+        display: inline-block;
+        
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          background: transparent;
+          text-indent: -9999px;
+          border-top: 2px solid $theme-color-seven;
+          border-left: 2px solid $theme-color-seven;
+          text-decoration: none;
+          color: transparent;
+          transform: rotate(135deg);
+          width: 5.57px;
+          height: 5.57px;
+          left: -3px;
+          right: 0px;
+          top: 0px;
+          bottom: 0px;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+@each $color in $theme-color-set {
+  $color-number: nth($color, 1);
+  $color-two: nth($color, 3);
+
+  .section--bg-#{$color-number} {
+
+    .listing-course {
+
+      .listing-course {
+
+        &__item--last {
+          border: 1px dashed $color-two;
+
+          .headline {
+            color: $color-two;
+          }
+
+          .text {
+            color: $color-two;
+          }
+
+          .listing-course__icon {
+            border: 1px solid $color-two;
+
+            &::after {
+              border-top: 2px solid $color-two;
+              border-left: 2px solid $color-two;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .listing-course {
+    margin: 0 0 40px 0;
+
+    .listing-course {
+
+      &__item {
+
+        &-last {
+          padding: 25px;
+
+          .listing-course__icon {
+            right: 25px;
+            bottom: 25px;
+          }
+        }
+      }
+
+      &__detail {
+
+        .listing-course {
+
+          &__subhead {
+            margin: 0px 0px 25px;
+          }
+
+          &__meta {
+            > span {
+              padding-left: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .listing-course {
+
+    .listing-course {
+
+      &__detail {
+        padding-bottom: 96px;
+
+        .listing-course {
+
+          &__actions {
+            position: absolute;
+            bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .listing-course {
+    margin: 0 0 60px 0;
+
+    .listing-course {
+
+      &__item {
+        padding: 40px 40px 20px;
+
+        &-last {
+          padding: 24px 30px;
+          
+          .listing-course__icon {
+            right: 24px;
+            bottom: 30px;
+          }
+        }
+      }
+
+      &__detail {
+        padding-bottom: 94px;
+
+        .listing-course {
+
+          &__degree {
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+          }
+
+          &__headline {
+            padding: 0px 0px 10px 0px;
+            margin: 0px 0px 10px 0px;
+          }
+
+          &__subhead {
+            margin: 0px 0px 30px;
+          }
+
+          &__meta {
+
+            > span {
+              margin: 0px 0px 20px;
+              padding-left: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

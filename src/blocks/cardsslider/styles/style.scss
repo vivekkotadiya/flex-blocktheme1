@@ -1,0 +1,101 @@
+.card{
+	&__slider{
+		margin-bottom: 40px;
+		.card__inner{
+			padding: 30px 20px 10px 20px;
+			border: 4px solid #f7f7f7;
+		}
+		.image{
+			margin-bottom: 0px;
+			img{
+				max-height: 200px;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+		.splide__top{
+			display: flex;
+			flex-flow: column;
+			flex-direction: column-reverse;
+			margin-bottom: 27px;
+			margin-right: 8.33%;
+		}
+	}
+}
+
+@media screen and (min-width: 481px) {
+	.card{
+		&__slider{
+			margin-bottom: 60px;
+			.image{
+				img{
+					max-height: 272px;
+				}
+			}
+			.card__inner{
+				padding: 20px;
+			}
+			.splide__top{
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.card{
+		&__slider{
+			margin-bottom: 80px;
+			.image{
+				img{
+					max-height: 300px;
+				}
+			}
+			.card__inner{
+				padding: 45px 40px 20px 40px;
+			}
+			.splide__top{
+				margin-top:40px;
+				margin-bottom: 60px;
+				margin-left: 8.33%;
+				flex-flow: row;
+				flex-direction: row;
+				align-items: center;
+				.headline{
+					&.headline--style-two{
+						margin-bottom: 0px;
+						margin-left: 24px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// frontend specific
+main{
+	.card__slider{
+		margin-left: calc((100% - 300px) / 2);
+	}
+}
+
+@each $breakpoint in $breakpoint-set {
+
+	$size: nth($breakpoint, 2);
+	$content: nth($breakpoint, 3);
+  
+	@media only screen and (min-width: $size) {
+		main .card__slider {
+		margin-left: calc((100% - $content) / 2);
+	  }
+	}
+}
+
+@media screen and (min-width: 1600px) {
+main{
+	.card__slider{
+		margin-left: calc((100% - 1400px) / 2);
+	}
+}
+}
+

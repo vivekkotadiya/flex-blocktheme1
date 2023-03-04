@@ -1,0 +1,98 @@
+.dozenten_slider{
+	margin-bottom: 20px;
+	.dozentin__inner{
+		background-color: #f7f7f7;
+		margin-top: -60px;
+		margin-bottom: 20px;
+		padding: 60px 20px 20px 20px;
+	}
+
+	.image{
+		max-width: 250px;
+		margin-left: 15px;
+		img{
+			object-fit: cover;
+			object-position: center;
+		}
+		.image__content{
+			background-color: #f7f7f7;
+		}
+	}
+
+	.dozentin--tags{
+		margin-bottom: 20px;
+		font-family: $theme-font-one;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		span{
+			display: inline-block;
+			border: 1px solid $theme-color-seven;
+			padding: 10px 16px;
+			color: $theme-color-seven;
+		}
+		
+	}
+
+	.splide__arrows{
+		justify-content: center;
+	}
+	.dozenten{
+		.splide__arrows{
+			display: none;
+		}
+	}
+}
+
+
+@media screen and (min-width: 481px) {
+	.dozenten_slider{
+		margin-bottom: 60px;
+		.dozentin__inner{
+			margin-top: -120px;
+			margin-bottom: 40px;
+			padding: 120px 20px 20px 20px;
+		}
+
+		.image{
+			max-width: 300px;
+		}
+
+		.splide__arrows{
+			justify-content: left;
+		}	
+	}
+}
+
+
+@media screen and (min-width: 1401px) {
+	.dozenten_slider{
+		margin-bottom: 80px;
+		.dozentin__inner{
+			margin-top: 0px;
+			padding: 40px;
+		}
+
+		.image{
+			max-width: 100%;
+			margin: 40px 0px 20px 0px;
+		}
+
+		.splide__arrows{
+			justify-content: right;
+			padding-right: 15px;
+		}
+		
+		.arrows--lg-hide{
+			display: none;
+		}
+
+		.dozenten{
+			.splide__arrows{
+				display: flex !important;
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,104 @@
+.counter {
+  margin: 0px 0px 20px;
+  padding: 25px;
+  position: relative;
+  width: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 38px;
+  }
+
+  &::before {
+    left: 0px;
+    top: 0px;
+    border-top: 5px solid $theme-color-eight;
+    border-left: 5px solid $theme-color-eight;
+  }
+
+  &::after {
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 5px solid $theme-color-eight;
+    border-right: 5px solid $theme-color-eight;
+  }
+
+  @each $color in $theme-color-set {
+    $color-name: nth($color, 1);
+    $color-value: nth($color, 2);
+
+    &--corner-color-#{$color-name} {
+      &::before {
+        border-top-color: $color-value;
+        border-left-color: $color-value;
+      }
+
+      &::after {
+        border-bottom-color: $color-value;
+        border-right-color: $color-value;
+      }
+    }
+
+    &--text-color-#{$color-name} {
+      color: $color-value;
+    }
+  }
+
+  .counter {
+    &__number {
+      margin: 0 0 15px 0;
+      font-family: $theme-font-one;
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 46px;
+      display: block;
+    }
+
+    &__text {
+      font-family: $theme-font-one;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 300;
+      &-main,
+      &-sub {
+        display: block;
+      }
+
+      &-main {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .counter {
+    margin: 0px 0px 30px;
+    padding: 40px;
+
+    .counter {
+      &__text {
+        font-size: 25px;
+        line-height: 30px;
+      }
+
+      &__number {
+        font-size: 55px;
+        line-height: 55px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+}
+
+@media screen and (min-width: 1025px) {
+  .counter {
+    margin: 0px auto 40px;
+    padding: 40px;
+  }
+}

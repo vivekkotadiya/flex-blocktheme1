@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "smt-theme/cardsslider",
+  "version": "0.1.5",
+  "title": "Cards Slider",
+  "category": "theme",
+  "description": "A gutenberg block for Cards Slider.",
+  "supports": {
+    "multiple": true,
+    "reusable": false,
+    "html": false,
+    "customClassName": false
+  },
+  "attributes": {
+    "showHideButton": {
+      "type": "boolean",
+      "default": true
+    },
+    "url": {
+      "type": "string"
+    },
+    "linkTarget": {
+      "type": "string"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    },
+    "blockTitle": {
+      "type": "string",
+      "source": "html",
+      "selector": ".card_slider-title"
+    }
+  },
+  "parent": [
+    "smt-theme/section"
+  ],
+  "textdomain": "smt-theme",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}
